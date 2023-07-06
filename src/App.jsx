@@ -22,7 +22,7 @@ function App() {
     <ThemeContext.Provider value={value}>
       <div
         className={`bg-fixed  bg-cover bg-no-repeat min-h-screen min-w-full`}
-        style={{ backgroundImage: `url('../src/Assets/${themeClass}-bg.png')` }}
+        style={{ backgroundImage: `url('./src/Assets/${themeClass}-bg.png')` }}
       >
         <Navbar />
         <Info />

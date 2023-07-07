@@ -18,6 +18,7 @@ export default {
         'primary-dark': '#00D1C7',
         'secondary-light': '#EDEDED',
         'secondary-dark': '#262626',
+        'dark-20': 'rgba(255, 255, 255, 0.2)',
       },
       textColor: {
         'primary-light': '#646AFF',

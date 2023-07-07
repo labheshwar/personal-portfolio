@@ -15,7 +15,7 @@ const AboutMe = () => {
       <h2
         className={`font-robotoFlex font-bold  text-xl md:text-2xl lg:text-4xl 2xl:text-5xl ${secondaryColor}`}
       >
-        <span className={`${textColor} font-menlo`}>01. </span> &lt;a little
+        <span className={`${textColor} font-menlo`}>00. </span> &lt;a little
         about me&gt;
       </h2>
       <p
@@ -40,6 +40,11 @@ const AboutMe = () => {
         CSS, I prefer to use the technologies as our web lords have intended,
         resulting in simple, maintainable and accessible applications.
       </p>
+      <h2
+        className={`font-robotoFlex font-bold mt-8 self-end text-lg md:text-xl lg:text-3xl 2xl:text-4xl opacity-30 ${secondaryColor}`}
+      >
+        &lt;/a little about me&gt;
+      </h2>
     </main>
   );
 };

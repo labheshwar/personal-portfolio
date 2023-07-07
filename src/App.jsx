@@ -7,6 +7,7 @@ import LightImg from './Assets/light-bg.png';
 import DarkImg from './Assets/dark-bg.png';
 import Loading from './Components/Loading';
 import AboutMe from './Components/AboutMe';
+import Skills from './Components/Skills';
 
 function App() {
   const [theme, setTheme] = useState('light');
@@ -45,6 +46,7 @@ function App() {
             <Navbar />
             <Info />
             <AboutMe />
+            <Skills />
           </div>
         </>
       )}

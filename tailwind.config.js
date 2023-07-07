@@ -31,6 +31,9 @@ export default {
         'secondary-light': '#EDEDED',
         'secondary-dark': '#262626',
       },
+      screens: {
+        '2xl': '1420px',
+      },
     },
     plugins: [],
   },

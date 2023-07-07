@@ -6,6 +6,7 @@ import Info from './Components/Info';
 import LightImg from './Assets/light-bg.png';
 import DarkImg from './Assets/dark-bg.png';
 import Loading from './Components/Loading';
+import AboutMe from './Components/AboutMe';
 
 function App() {
   const [theme, setTheme] = useState('light');
@@ -31,23 +32,22 @@ function App() {
 
   return (
     <ThemeContext.Provider value={value}>
-      <div
-        className={`bg-fixed bg-cover bg-no-repeat min-h-screen min-w-full ${
-          isLoading ? 'loading' : ''
-        }`}
-        style={{
-          backgroundImage: `url(${theme === 'light' ? LightImg : DarkImg})`,
-        }}
-      >
-        {isLoading ? (
-          <Loading />
-        ) : (
-          <>
+      {isLoading ? (
+        <Loading />
+      ) : (
+        <>
+          <div
+            className={`bg-fixed bg-cover bg-no-repeat min-h-screen min-w-full`}
+            style={{
+              backgroundImage: `url(${theme === 'light' ? LightImg : DarkImg})`,
+            }}
+          >
             <Navbar />
             <Info />
-          </>
-        )}
-      </div>
+            <AboutMe />
+          </div>
+        </>
+      )}
     </ThemeContext.Provider>
   );
 }

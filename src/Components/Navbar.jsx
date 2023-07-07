@@ -1,5 +1,6 @@
 import { useContext, useState } from 'react';
 import ThemeContext from '../ThemeContext';
+import { Link } from 'react-scroll';
 
 const Navbar = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
@@ -33,63 +34,93 @@ const Navbar = () => {
       <ul className='flex flex-col items-start mt-8 md:mt-0 md:flex-row md:items-center justify-center  ml-auto text-xl font-menlo'>
         <li>
           <span className={`${spanColor} mr-1`}>00.</span>
-          <a
-            href='#'
+          <Link
+            to='about'
             className={`${anchorTagColor} p-1 ${
               activeLink === 0 ? `border-b-2 ${borderColor}` : ''
-            }`}
+            } ${
+              theme === 'light'
+                ? 'text-primary-light hover:text-primary-dark'
+                : 'text-primary-dark hover:text-primary-light'
+            } transition-colors duration-300 ease-in-out cursor-pointer`}
             onClick={() => handleLinkClick(0)}
+            smooth={true}
+            duration={500}
           >
             &lt;about&gt;
-          </a>
+          </Link>
         </li>
         <li>
           <span className={`${spanColor} mr-1`}>01.</span>
-          <a
-            href='#'
+          <Link
+            to='skills'
             className={`${anchorTagColor} p-1 ${
               activeLink === 1 ? `border-b-2 ${borderColor}` : ''
-            }`}
+            } ${
+              theme === 'light'
+                ? 'text-primary-light hover:text-primary-dark'
+                : 'text-primary-dark hover:text-primary-light'
+            } transition-colors duration-300 ease-in-out cursor-pointer`}
             onClick={() => handleLinkClick(1)}
+            smooth={true}
+            duration={500}
           >
             &lt;skills&gt;
-          </a>
+          </Link>
         </li>
         <li>
           <span className={`${spanColor} mr-1`}>02.</span>
-          <a
-            href='#'
+          <Link
+            to='portfolio'
             className={`${anchorTagColor} p-1 ${
               activeLink === 2 ? `border-b-2 ${borderColor}` : ''
-            }`}
+            } ${
+              theme === 'light'
+                ? 'text-primary-light hover:text-primary-dark'
+                : 'text-primary-dark hover:text-primary-light'
+            } transition-colors duration-300 ease-in-out cursor-pointer`}
             onClick={() => handleLinkClick(2)}
+            smooth={true}
+            duration={500}
           >
             &lt;portfolio&gt;
-          </a>
+          </Link>
         </li>
         <li>
           <span className={`${spanColor} mr-1`}>03.</span>
-          <a
-            href='#'
+          <Link
+            to='career'
             className={`${anchorTagColor} p-1 ${
               activeLink === 3 ? `border-b-2 ${borderColor}` : ''
-            }`}
+            } ${
+              theme === 'light'
+                ? 'text-primary-light hover:text-primary-dark'
+                : 'text-primary-dark hover:text-primary-light'
+            } transition-colors duration-300 ease-in-out cursor-pointer`}
             onClick={() => handleLinkClick(3)}
+            smooth={true}
+            duration={500}
           >
             &lt;career&gt;
-          </a>
+          </Link>
         </li>
         <li>
           <span className={`${spanColor} mr-1`}>04.</span>
-          <a
-            href='#'
+          <Link
+            to='contact'
             className={`${anchorTagColor} p-1 ${
               activeLink === 4 ? `border-b-2 ${borderColor}` : ''
-            }`}
+            } ${
+              theme === 'light'
+                ? 'text-primary-light hover:text-primary-dark'
+                : 'text-primary-dark hover:text-primary-light'
+            } transition-colors duration-300 ease-in-out cursor-pointer`}
             onClick={() => handleLinkClick(4)}
+            smooth={true}
+            duration={500}
           >
             &lt;contact&gt;
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>

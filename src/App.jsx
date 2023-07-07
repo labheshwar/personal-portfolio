@@ -3,6 +3,8 @@ import { useState } from 'react';
 import ThemeContext from './ThemeContext';
 import Navbar from './Components/Navbar';
 import Info from './Components/Info';
+import LightImg from './Assets/light-bg.png';
+import DarkImg from './Assets/dark-bg.png';
 
 function App() {
   const [theme, setTheme] = useState('light');
@@ -10,8 +12,6 @@ function App() {
   const toggleTheme = () => {
     setTheme(theme === 'light' ? 'dark' : 'light');
   };
-
-  const themeClass = theme === 'light' ? 'light' : 'dark';
 
   const value = {
     theme,
@@ -23,7 +23,7 @@ function App() {
       <div
         className={`bg-fixed  bg-cover bg-no-repeat min-h-screen min-w-full`}
         style={{
-          backgroundImage: `url('src/Assets/${themeClass}-bg.png')`,
+          backgroundImage: `url(${theme === 'light' ? LightImg : DarkImg})`,
         }}
       >
         <Navbar />

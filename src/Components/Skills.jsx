@@ -20,9 +20,9 @@ const Skills = () => {
         skills&gt;
       </h2>
       <div
-        className={`${
-          theme === 'dark' ? 'bg-dark-20' : 'bg-white'
-        } shadow-[27px 30px 37px 0 rgba(0, 0, 0, 0.2)] rounded-3xl mt-8 w-full px-6 md:px-10 py-8 md:py-14 flex flex-col h-auto justify-between`}
+        className={`${theme === 'dark' ? 'bg-dark-20' : 'bg-white'} ${
+          theme === 'light' && 'shadow-gray-400'
+        } shadow-xl rounded-3xl mt-8 w-full px-6 md:px-10 py-8 md:py-14 flex flex-col h-auto justify-between`}
       >
         <SkillBox theme={theme} skillName={'React.js'} skillRank={5} />
         <SkillBox theme={theme} skillName={'Node.js'} skillRank={3} />

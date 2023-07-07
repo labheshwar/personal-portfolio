@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const SkillBox = ({ theme, skillRank, skillName }) => {
   const secondaryColor =
     theme === 'light' ? 'text-secondary-dark' : 'text-secondary-light';
@@ -27,3 +29,9 @@ const SkillBox = ({ theme, skillRank, skillName }) => {
 };
 
 export default SkillBox;
+
+SkillBox.propTypes = {
+  theme: PropTypes.string.isRequired,
+  skillRank: PropTypes.number.isRequired,
+  skillName: PropTypes.string.isRequired,
+};

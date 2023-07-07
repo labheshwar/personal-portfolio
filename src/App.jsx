@@ -21,6 +21,7 @@ function App() {
   };
 
   useEffect(() => {
+    setIsLoading(true);
     const img = new Image();
     img.src = theme === 'light' ? LightImg : DarkImg;
     img.onload = () => {

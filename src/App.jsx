@@ -13,7 +13,7 @@ import Career from './Components/Career';
 import Contact from './Components/Contact';
 
 function App() {
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState('dark');
   const [isLoading, setIsLoading] = useState(true);
 
   const toggleTheme = () => {

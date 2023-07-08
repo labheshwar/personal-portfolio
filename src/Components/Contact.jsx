@@ -32,9 +32,15 @@ const Contact = () => {
           just want to say hi, I&apos;ll try my best to get back to you asap!
         </p>
         <button
-          className={`font-menlo ${backgroundColor}  md:w-44 2xl:w-52 2xl:h-16 h-14 rounded-xl mt-8 ${buttonSecondaryTextColor} hover:bg-opacity-80 text-2xl`}
+          className={`font-menlo ${backgroundColor}  md:w-44 2xl:w-52 2xl:h-16 h-14 rounded-xl mt-8 ${buttonSecondaryTextColor} hover:bg-opacity-80 text-xl`}
         >
-          <a href='https://wa.me/+923438370414'>Say Hello!</a>
+          <a
+            href='https://wa.me/+923438370414'
+            target='_blank'
+            rel='noreferrer'
+          >
+            Say Hello!
+          </a>
         </button>
       </div>
       <h2

@@ -41,7 +41,7 @@ const Career = () => {
         ))}
       </div>
       <h2
-        className={`font-robotoFlex font-bold mt-8 self-end text-lg md:text-xl lg:text-3xl 2xl:text-4xl opacity-30 ${secondaryColor}`}
+        className={`font-robotoFlex font-bold  self-end text-lg md:text-xl lg:text-3xl 2xl:text-4xl opacity-30 ${secondaryColor}`}
       >
         &lt;/my working career&gt;
       </h2>

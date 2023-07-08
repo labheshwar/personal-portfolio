@@ -50,7 +50,7 @@ const Info = () => {
       >
         <div className='mx-auto flex'>
           <span className={`material-symbols-outlined pr-2`}>download</span>
-          <a href='../Assets/LabheshwarResume.pdf' download>
+          <a href='./src/Assets/LabheshwarResume.pdf' download>
             My Resume
           </a>
         </div>

@@ -46,16 +46,20 @@ const Info = () => {
         Full Stack Web Developer | Meta Certified Frontend Developer | 6-Star
         Problem Solver @ HackerRank | React.js | Node.js
       </p>
-      <button
-        className={`font-roboto ${backgroundColor}  md:w-44 2xl:w-52 2xl:h-16 h-14 rounded-md mt-8 ${buttonSecondaryTextColor} hover:bg-opacity-80 flex items-center`}
+      <a
+        href='https://drive.google.com/file/d/17wxdoU6-sci6zahi4HA3r1E985flysEr/view?usp=drive_link'
+        target='_blank'
+        rel='noreferrer'
       >
-        <div className='mx-auto flex'>
-          <span className={`material-symbols-outlined pr-2`}>download</span>
-          <a href='./src/Assets/LabheshwarResume.pdf' download>
+        <button
+          className={`font-roboto ${backgroundColor}  md:w-44 2xl:w-52 2xl:h-16 h-14 rounded-md mt-8 ${buttonSecondaryTextColor} hover:bg-opacity-80 flex items-center`}
+        >
+          <div className='mx-auto flex'>
+            <span className={`material-symbols-outlined pr-2`}>download</span>
             My Resume
-          </a>
-        </div>
-      </button>
+          </div>
+        </button>
+      </a>
     </main>
   );
 };

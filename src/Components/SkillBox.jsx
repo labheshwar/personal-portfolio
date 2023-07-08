@@ -20,7 +20,7 @@ const SkillBox = ({ theme, skillRank, skillName }) => {
             key={rank}
             className={`w-1/6 h-12 rounded-lg ${
               rank <= skillRank ? backgroundColor : 'bg-gray-300'
-            } ${rank <= skillRank ? 'opacity-' + rank * 20 : ''}`}
+            } ${rank <= skillRank ? `opacity-${rank * 20}` : ''}`}
           ></div>
         ))}
       </div>

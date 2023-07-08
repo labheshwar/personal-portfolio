@@ -8,6 +8,7 @@ import DarkImg from './Assets/dark-bg.png';
 import Loading from './Components/Loading';
 import AboutMe from './Components/AboutMe';
 import Skills from './Components/Skills';
+import MyPortfolio from './Components/MyPortfolio';
 
 function App() {
   const [theme, setTheme] = useState('light');
@@ -47,6 +48,7 @@ function App() {
             <Info />
             <AboutMe />
             <Skills />
+            <MyPortfolio />
           </div>
         </>
       )}

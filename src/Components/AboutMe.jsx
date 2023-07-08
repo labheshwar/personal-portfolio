@@ -35,7 +35,7 @@ const AboutMe = () => {
       <p
         className={`font-roboto font-light text-lg md:text-xl lg:text-2xl 2xl:text-3xl mt-8 ${secondaryColor}`}
       >
-        I write clean and modern JS/TS code with a rigid code-style, and I do it
+        I write clean and modern JS code with a rigid code-style, and I do it
         really fast. Coming from the times when all we had was Query and plain
         CSS, I prefer to use the technologies as our web lords have intended,
         resulting in simple, maintainable and accessible applications.

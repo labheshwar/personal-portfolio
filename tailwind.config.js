@@ -19,12 +19,15 @@ export default {
         'secondary-light': '#EDEDED',
         'secondary-dark': '#262626',
         'dark-20': 'rgba(255, 255, 255, 0.2)',
+        'custom-grey': '#D9D9D9',
+        'custom-grey-5': 'rgba(217, 217, 217, 0.5)',
       },
       textColor: {
         'primary-light': '#646AFF',
         'primary-dark': '#00D1C7',
         'secondary-light': '#EDEDED',
         'secondary-dark': '#262626',
+        'black-6': 'rgba(0, 0, 0, 0.6)',
       },
       borderColor: {
         'primary-light': '#646AFF',

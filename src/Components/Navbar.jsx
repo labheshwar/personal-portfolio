@@ -32,7 +32,7 @@ const Navbar = () => {
         {theme === 'light' ? 'dark_mode' : 'light_mode'}
       </button>
       <ul className='flex flex-col items-start mt-8 md:mt-0 md:flex-row md:items-center justify-center  ml-auto text-xl font-menlo'>
-        <li className='mb-4'>
+        <li className='mb-4 md:mb-0'>
           <span className={`${spanColor} mr-1`}>00.</span>
           <Link
             to='about'
@@ -50,7 +50,7 @@ const Navbar = () => {
             &lt;about&gt;
           </Link>
         </li>
-        <li className='mb-4'>
+        <li className='mb-4 md:mb-0'>
           <span className={`${spanColor} mr-1`}>01.</span>
           <Link
             to='skills'
@@ -68,7 +68,7 @@ const Navbar = () => {
             &lt;skills&gt;
           </Link>
         </li>
-        <li className='mb-4'>
+        <li className='mb-4 md:mb-0'>
           <span className={`${spanColor} mr-1`}>02.</span>
           <Link
             to='portfolio'
@@ -86,7 +86,7 @@ const Navbar = () => {
             &lt;portfolio&gt;
           </Link>
         </li>
-        <li className='mb-4'>
+        <li className='mb-4 md:mb-0'>
           <span className={`${spanColor} mr-1`}>03.</span>
           <Link
             to='career'
@@ -104,7 +104,7 @@ const Navbar = () => {
             &lt;career&gt;
           </Link>
         </li>
-        <li>
+        <li className='mb-4 md:mb-0'>
           <span className={`${spanColor} mr-1`}>04.</span>
           <Link
             to='contact'

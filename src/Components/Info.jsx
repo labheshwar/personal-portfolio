@@ -25,7 +25,8 @@ const Info = () => {
           <span className={`${secondaryTextColor} `}>Hi, I&apos;m</span>
           <span className={`${textColor}`}>
             {' '}
-            Labheshwar, a full-stack developer.
+            Labheshwar,
+            <p className={`${secondaryTextColor}`}> a full-stack developer.</p>
           </span>
         </h2>
         <div className='relative flex-shrink-0 ml-8 mb-16 md:mb-0'>

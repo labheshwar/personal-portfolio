@@ -9,6 +9,8 @@ import Loading from './Components/Loading';
 import AboutMe from './Components/AboutMe';
 import Skills from './Components/Skills';
 import MyPortfolio from './Components/MyPortfolio';
+import Career from './Components/Career';
+import Contact from './Components/Contact';
 
 function App() {
   const [theme, setTheme] = useState('light');
@@ -49,6 +51,8 @@ function App() {
             <AboutMe />
             <Skills />
             <MyPortfolio />
+            <Career />
+            <Contact />
           </div>
         </>
       )}

@@ -14,13 +14,13 @@ export const ProjectCard = ({
     <div
       className={`${theme === 'dark' ? 'bg-dark-20' : 'bg-white'} ${
         theme === 'light' && 'shadow-gray-400'
-      } shadow-xl rounded-3xl mt-8 w-full px-6 py-4 h-auto flex flex-col md:w-5/12 mx-8`}
+      } shadow-xl rounded-3xl mt-8 w-full px-6 py-4 h-auto flex flex-col md:w-[46%]`}
     >
       <div className='flex justify-between items-center'>
         <svg
           xmlns='http://www.w3.org/2000/svg'
-          width='32'
-          height='32'
+          width='28'
+          height='28'
           viewBox='0 0 32 32'
           fill={`${theme === 'light' ? '#646AFF' : '#00D1C7'}`}
           id='file'

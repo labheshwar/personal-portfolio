@@ -52,7 +52,7 @@ const Info = () => {
         rel='noreferrer'
       >
         <button
-          className={`font-roboto ${backgroundColor}  md:w-44 2xl:w-52 2xl:h-16 h-14 rounded-md mt-8 ${buttonSecondaryTextColor} hover:bg-opacity-80 flex items-center`}
+          className={`font-roboto ${backgroundColor} w-full  md:w-44 2xl:w-52 2xl:h-16 h-14 rounded-md mt-8 ${buttonSecondaryTextColor} hover:bg-opacity-80 flex items-center`}
         >
           <div className='mx-auto flex'>
             <span className={`material-symbols-outlined pr-2`}>download</span>

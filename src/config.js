@@ -42,6 +42,11 @@ export const portfolioData = [
 
 export const experience = [
   {
+    position: 'Frontend Developer',
+    company: 'Transviti',
+    duration: 'July-2023 to Present',
+  },
+  {
     position: 'MERN Stack Intern',
     company: 'Hostelin',
     duration: 'Oct-2022 to Dec-2022',

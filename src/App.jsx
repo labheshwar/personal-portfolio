@@ -5,12 +5,13 @@ import Navbar from './Components/Navbar';
 import Info from './Components/Info';
 import LightImg from './Assets/light-bg.png';
 import DarkImg from './Assets/dark-bg.png';
-import Loading from './Components/Loading';
 import AboutMe from './Components/AboutMe';
 import Skills from './Components/Skills';
 import MyPortfolio from './Components/MyPortfolio';
 import Career from './Components/Career';
 import Contact from './Components/Contact';
+import Loader from './Components/Loader';
+import GitHub from './Components/GitHub';
 
 function App() {
   const [theme, setTheme] = useState('dark');
@@ -37,7 +38,7 @@ function App() {
   return (
     <ThemeContext.Provider value={value}>
       {isLoading ? (
-        <Loading />
+        <Loader />
       ) : (
         <>
           <div
@@ -49,8 +50,9 @@ function App() {
             <Navbar />
             <Info />
             <AboutMe />
-            <Skills />
             <MyPortfolio />
+            <Skills />
+            <GitHub />
             <Career />
             <Contact />
           </div>

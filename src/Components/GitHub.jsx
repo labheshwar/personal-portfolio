@@ -1,9 +1,10 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react"; // Import 'useState' and 'useEffect'
 import GitHubCalendar from "react-github-calendar";
 import ThemeContext from "../ThemeContext";
 
 const GitHub = () => {
     const { theme } = useContext(ThemeContext);
+    const [blockSize, setBlockSize] = useState(15); // Initialize blockSize with 15
 
     const textColor =
         theme === 'light' ? 'text-primary-light' : 'text-primary-dark';
@@ -28,6 +29,22 @@ const GitHub = () => {
         ],
     };
 
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth < 600) {
+                setBlockSize(8);
+            } else {
+                setBlockSize(15);
+            }
+        };
+
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
+
     return (
         <main className='flex flex-col px-8 md:px-20' id='about'>
             <h2
@@ -38,13 +55,14 @@ const GitHub = () => {
             <div className="mt-7">
                 <GitHubCalendar
                     username="labheshwar"
-                    blockSize={15}
+                    blockSize={blockSize} // Use the blockSize state here
                     colorScheme={theme === 'light' ? 'dark' : 'light'}
-                    fontSize={15}
-                    blockMargin={8}
+                    fontSize={blockSize}
+                    blockMargin={blockSize === 8 ? 6 : 8}
                     style={{
                         color: theme === 'light' ? '#000' : '#fff',
                         fontFamily: 'Roboto Flex',
+                        minWidth: "100%"
                     }}
                     color="#fff"
                     theme={lightColorScheme}

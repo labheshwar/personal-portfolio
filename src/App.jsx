@@ -14,7 +14,7 @@ import Loader from './Components/Loader';
 import GitHub from './Components/GitHub';
 
 function App() {
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useState('light');
   const [isLoading, setIsLoading] = useState(true);
 
   const toggleTheme = () => {

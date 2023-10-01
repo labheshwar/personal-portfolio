@@ -44,7 +44,7 @@ export const experience = [
   {
     position: 'Frontend Developer',
     company: 'Transviti',
-    duration: 'July-2023 to Present',
+    duration: 'July-2023 to Oct-2023',
   },
   {
     position: 'MERN Stack Intern',

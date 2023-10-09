@@ -10,10 +10,10 @@ Here's how you can make contributions:
 
 1. **Fork the Repository:** Click the "Fork" button at the top right of this repository to create your copy.
 
-2. **Clone Your Fork:** Clone your forked repository to your local machine using the following command (replace `yourusername` with your GitHub username):
+2. **Clone Your Fork:** Clone your forked repository to your local machine using the following command:
 
    ```bash
-   git clone https://github.com/yourusername/personal-portfolio.git
+   git clone https://github.com/labheshwar/personal-portfolio.git
    ```
 
 3. **Make Changes:** Now you can make changes to my portfolio. You can add new features, improve existing ones, fix bugs, or even suggest design enhancements.

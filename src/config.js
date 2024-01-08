@@ -42,6 +42,11 @@ export const portfolioData = [
 
 export const experience = [
   {
+    position: 'Associate Software Engineer',
+    company: "PaysysLabs",
+    duration: 'Oct-2023 to Present'
+  },
+  {
     position: 'Frontend Developer',
     company: 'Transviti',
     duration: 'July-2023 to Oct-2023',

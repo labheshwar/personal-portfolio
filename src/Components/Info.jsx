@@ -1,4 +1,4 @@
-import ProfilePic from '../Assets/profile-pic.png';
+import Resume from '../Assets/Resume_Labheshwar.pdf';
 import { useContext } from 'react';
 import ThemeContext from '../ThemeContext';
 
@@ -31,7 +31,7 @@ const Info = () => {
         </h2>
         <div className='relative flex-shrink-0 ml-8 mb-16 md:mb-0'>
           <img
-            src={ProfilePic}
+            src={"https://avatars.githubusercontent.com/u/66070272?v=4"}
             alt='profile pic'
             className='w-48 h-48 2xl:w-60 2xl:h-60'
           />
@@ -43,11 +43,11 @@ const Info = () => {
       <p
         className={`font-roboto text-lg md:text-xl ${secondaryTextColor} md:w-5/6 mt-6 leading-normal 2xl:text-2xl`}
       >
-        Full Stack Web Developer | Meta Certified Frontend Developer | 6-Star
-        Problem Solver @ HackerRank | React.js | Node.js
+        Associate Software Engineer | PaysysLabs | Meta Certified Frontend Developer | 6-Star
+        Problem Solver @ HackerRank
       </p>
       <a
-        href='https://drive.google.com/file/d/17wxdoU6-sci6zahi4HA3r1E985flysEr/view?usp=drive_link'
+        href={Resume}
         target='_blank'
         rel='noreferrer'
       >

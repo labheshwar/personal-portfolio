@@ -1,5 +1,23 @@
 export const portfolioData = [
   {
+    name: 'Students Guide',
+    description:
+      'The Students Guide, a university FYP, enhances education through classroom tools, job searches, and course suggestions for Students, Teachers, Admins, and Superadmins.',
+    techStack: [
+      'Next.js',
+      'TailwindCSS',
+      'Material UI',
+      'Node.js',
+      'Express.js',
+      'MongoDB',
+      'Socket.io',
+      'Nodemailer',
+      'AWS S3',
+    ],
+    githubLink: 'https://github.com/labheshwar/students-guide',
+    demoLink: 'https://students-guide.vercel.app',
+  },
+  {
     name: 'Reactive Express',
     description:
       'Reactive Express is a full-stack E-Commerce website built with MERN Stack. It has features like Authentication, Cart, Payment Gateway, etc.',
@@ -43,8 +61,8 @@ export const portfolioData = [
 export const experience = [
   {
     position: 'Associate Software Engineer',
-    company: "PaysysLabs",
-    duration: 'Oct-2023 to Present'
+    company: 'PaysysLabs',
+    duration: 'Oct-2023 to Present',
   },
   {
     position: 'Frontend Developer',

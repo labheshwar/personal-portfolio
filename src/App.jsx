@@ -51,7 +51,7 @@ function App() {
       ) : (
         <>
           <div
-            className={`bg-fixed bg-cover bg-no-repeat min-h-screen min-w-full`}
+            className={`bg-fixed bg-cover bg-no-repeat min-h-screen min-w-full overflow-x-hidden`}
             style={{
               backgroundImage: `url(${theme === 'light' ? LightImg : DarkImg})`,
             }}

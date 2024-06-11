@@ -5,7 +5,7 @@ const SkillColor = ({ rank, backgroundColor }) => {
   return (
     <div
       key={rank}
-      className='w-1/6 h-12 rounded-lg'
+      className='w-6 h-6 xs:w-8 xs:h-8 sm:w-12 md:w-1/6 sm:h-12 rounded-full lg:rounded-lg'
       style={{ backgroundColor }}
       data-aos='fade-right'
       data-aos-easing="linear"

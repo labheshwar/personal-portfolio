@@ -26,7 +26,7 @@ const SkillBox = ({ theme, skillRank, skillName }) => {
   return (
     <div className='flex items-center p-2 md:p-3 xl:p-4 2xl:p-5'>
       <h3
-        className={`font-roboto w-40 md:w-60 text-md md:text-2xl lg:text-3xl 2xl:text-4xl ${
+        className={`w-40 md:w-60 font-menlo text-md md:text-lg lg:text-xl 2xl:text-2xl ${
           isLightTheme ? 'text-secondary-dark' : 'text-secondary-light'
         }`}
       >

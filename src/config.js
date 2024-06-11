@@ -80,3 +80,66 @@ export const experience = [
     duration: 'Jan-2022 to Apr-2022',
   },
 ];
+
+export const skills = [
+  {
+    name: "JavaScript",
+    rank: 5
+  },
+  {
+    name: "TypeScript",
+    rank: 3
+  },
+  {
+    name: "Next.js",
+    rank: 4
+  },
+  {
+    name: "React.js",
+    rank: 5
+  },
+  {
+    name: "Redux.js",
+    rank: 4
+  },
+  {
+    name: "Tailwind",
+    rank: 4
+  },
+  {
+    name: "Testing Library",
+    rank: 3
+  },
+  {
+    name: "Material UI",
+    rank: 4
+  },
+  {
+    name: "Node.js",
+    rank: 4
+  },
+  {
+    name: "Express.js",
+    rank: 4
+  },
+  {
+    name: "SQL",
+    rank: 4
+  },
+  {
+    name: "Java",
+    rank: 4
+  },
+  {
+    name: "Spring Boot",
+    rank: 3
+  },
+  {
+    name: "Git",
+    rank: 4
+  },
+  {
+    name: "Jira",
+    rank: 3
+  },
+]

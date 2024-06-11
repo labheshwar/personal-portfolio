@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import ThemeContext from '../ThemeContext';
 import SkillBox from './SkillBox';
+import { skills } from '../config';
 
 const Skills = () => {
   const { theme } = useContext(ThemeContext);
@@ -24,13 +25,14 @@ const Skills = () => {
           theme === 'light' && 'shadow-gray-400'
         } shadow-xl rounded-3xl mt-8 w-full px-6 md:px-10 py-8 md:py-14 flex flex-col h-auto justify-between`}
       >
-        <SkillBox theme={theme} skillName={'React.js'} skillRank={5} />
-        <SkillBox theme={theme} skillName={'Node.js'} skillRank={3} />
-        <SkillBox theme={theme} skillName={'Express.js'} skillRank={4} />
-        <SkillBox theme={theme} skillName={'Redux.js'} skillRank={3} />
-        <SkillBox theme={theme} skillName={'Tailwind.js'} skillRank={5} />
-        <SkillBox theme={theme} skillName={'SQL'} skillRank={4} />
-        <SkillBox theme={theme} skillName={'Problem Solving'} skillRank={4} />
+        {skills.map((skill, index) => (
+          <SkillBox
+            key={index}
+            theme={theme}
+            skillName={skill.name}
+            skillRank={skill.rank}
+          />
+        ))}
       </div>
       <h2
         className={`font-robotoFlex font-bold mt-8 self-end text-lg md:text-xl lg:text-3xl 2xl:text-4xl opacity-30 ${secondaryColor}`}

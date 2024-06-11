@@ -37,6 +37,7 @@ export default {
       },
       screens: {
         '2xl': '1420px',
+        'xs': '450px'
       },
       opacity: {
         1: '0.2',

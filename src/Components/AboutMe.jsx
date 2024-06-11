@@ -1,7 +1,9 @@
 import { useContext } from 'react';
+import 'aos/dist/aos.css';
 import ThemeContext from '../ThemeContext';
 
 const AboutMe = () => {
+
   const { theme } = useContext(ThemeContext);
 
   const textColor =
@@ -11,9 +13,13 @@ const AboutMe = () => {
     theme === 'light' ? 'text-secondary-dark' : 'text-secondary-light';
 
   return (
-    <main className='flex flex-col px-8 md:px-20' id='about'>
+    <main
+      className='flex flex-col px-8 md:px-20'
+      id='about'
+      data-aos='fade-down-right'
+    >
       <h2
-        className={`font-robotoFlex font-bold  text-xl md:text-2xl lg:text-4xl 2xl:text-5xl ${secondaryColor}`}
+        className={`font-robotoFlex font-bold text-xl md:text-2xl lg:text-4xl 2xl:text-5xl ${secondaryColor}`}
       >
         <span className={`${textColor} font-menlo`}>00. </span> &lt;a little
         about me&gt;

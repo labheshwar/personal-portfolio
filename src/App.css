@@ -5,6 +5,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .drop-shadow-custom-light {
+    filter: drop-shadow(0 -4px 4px rgba(100, 106, 255, 0.4))
+      drop-shadow(4px 0 4px rgba(100, 106, 255, 0.4))
+      drop-shadow(0 4px 4px rgba(100, 106, 255, 0.4));
+  }
+  .drop-shadow-custom-dark {
+    filter: drop-shadow(0 -4px 4px rgba(0, 209, 199, 0.4))
+      drop-shadow(4px 0 4px rgba(0, 209, 199, 0.4))
+      drop-shadow(0 4px 4px rgba(0, 209, 199, 0.4));
+  }
+}
+
 .react-activity-calendar__calendar {
-    width: 100%;
+  width: 100%;
 }

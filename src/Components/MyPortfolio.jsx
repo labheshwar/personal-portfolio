@@ -36,6 +36,7 @@ const MyPortfolio = () => {
             techStack={project.techStack}
             githubLink={project.githubLink}
             demoLink={project.demoLink}
+            dataAos={index % 2 === 0 ? 'fade-down-right' : 'fade-down-left'}
           />
         ))}
       </div>

@@ -18,6 +18,10 @@ const Info = () => {
 
   const buttonSecondaryTextColor =
     theme === 'dark' ? 'text-secondary-dark' : 'text-secondary-light';
+
+  const imgShadow =
+    theme === 'dark' ? 'drop-shadow-custom-dark' : 'drop-shadow-custom-light';
+
   return (
     <main className='flex flex-col p-8 mt-20 md:p-20 md:mt-0'>
       <div className='flex flex-col-reverse md:flex-row  items-center justify-between'>
@@ -29,7 +33,7 @@ const Info = () => {
             <p className={`${secondaryTextColor}`}> a full-stack developer.</p>
           </span>
         </h2>
-        <div className='relative flex-shrink-0 ml-8 mb-16 md:mb-0'>
+        <div className={`relative flex-shrink-0 ml-8 mb-16 md:mb-0 ${imgShadow}`}>
           <img
             src={"https://avatars.githubusercontent.com/u/66070272?v=4"}
             alt='profile pic'

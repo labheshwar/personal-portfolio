@@ -7,6 +7,7 @@ export const ProjectCard = ({
   techStack,
   githubLink,
   demoLink,
+  dataAos
 }) => {
   const iconColor = theme === 'light' ? '#000000' : '#A7A7A7';
   const textColor = theme === 'light' ? 'text-black' : 'text-[#D9D9D9]';
@@ -15,6 +16,7 @@ export const ProjectCard = ({
       className={`${theme === 'dark' ? 'bg-dark-20' : 'bg-white'} ${
         theme === 'light' && 'shadow-gray-400'
       } shadow-xl rounded-3xl mt-8 w-full px-6 py-4 h-auto flex flex-col md:w-[46%]`}
+      data-aos={dataAos}
     >
       <div className='flex justify-between items-center'>
         <svg
@@ -95,4 +97,5 @@ ProjectCard.propTypes = {
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   techStack: PropTypes.array.isRequired,
+  dataAos: PropTypes.string.isRequired
 };

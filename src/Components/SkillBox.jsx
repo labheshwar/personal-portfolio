@@ -1,6 +1,9 @@
 import PropTypes from 'prop-types';
+import SkillColor from './SkillColor';
 
 const SkillBox = ({ theme, skillRank, skillName }) => {
+
+
   const isLightTheme = theme === 'light';
 
   const getColorByRank = (rank) => {
@@ -34,11 +37,7 @@ const SkillBox = ({ theme, skillRank, skillName }) => {
           const backgroundColor =
             rank <= skillRank ? getColorByRank(rank) : '#D9D9D9';
           return (
-            <div
-              key={rank}
-              className='w-1/6 h-12 rounded-lg'
-              style={{ backgroundColor }}
-            ></div>
+            <SkillColor key={rank} backgroundColor={backgroundColor} rank={rank} />
           );
         })}
       </div>

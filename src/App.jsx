@@ -12,6 +12,7 @@ import Career from './Components/Career';
 import Contact from './Components/Contact';
 import Loader from './Components/Loader';
 import GitHub from './Components/GitHub';
+import Aos from 'aos';
 
 function App() {
   const [theme, setTheme] = useState('light');
@@ -34,6 +35,14 @@ function App() {
       setIsLoading(false);
     };
   }, [theme]);
+
+  useEffect(() => {
+    Aos.init({
+      duration: 500,
+      easing: 'ease-in-out',
+      once: true,
+    });
+  }, []);
 
   return (
     <ThemeContext.Provider value={value}>

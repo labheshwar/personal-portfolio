@@ -1,10 +1,11 @@
-import { useContext, useEffect, useState } from "react"; // Import 'useState' and 'useEffect'
+import { useContext, useEffect, useState } from "react";
 import GitHubCalendar from "react-github-calendar";
 import ThemeContext from "../ThemeContext";
 
 const GitHub = () => {
     const { theme } = useContext(ThemeContext);
-    const [blockSize, setBlockSize] = useState(15); // Initialize blockSize with 15
+    const [blockSize, setBlockSize] = useState(15);
+    const [showHalfYear, setShowHalfYear] = useState(false);
 
     const textColor =
         theme === 'light' ? 'text-primary-light' : 'text-primary-dark';
@@ -36,7 +37,10 @@ const GitHub = () => {
             } else {
                 setBlockSize(15);
             }
+            setShowHalfYear(window.innerWidth < 850);
         };
+
+        handleResize();
 
         window.addEventListener("resize", handleResize);
 
@@ -45,17 +49,34 @@ const GitHub = () => {
         };
     }, []);
 
+    const selectLastHalfYear = (contributions) => {
+        const currentYear = new Date().getFullYear();
+        const currentMonth = new Date().getMonth();
+        const shownMonths = 6;
+
+        return contributions.filter(activity => {
+            const date = new Date(activity.date);
+            const monthOfDay = date.getMonth();
+
+            return (
+                date.getFullYear() === currentYear &&
+                monthOfDay > currentMonth - shownMonths &&
+                monthOfDay <= currentMonth
+            );
+        });
+    };
+
     return (
-        <main className='flex flex-col px-8 md:px-20' id='about'>
+        <main className='flex flex-col px-8 md:px-20' id='about' data-aos="fade-down-left">
             <h2
-                className={`font-robotoFlex font-bold  text-xl md:text-2xl lg:text-4xl 2xl:text-5xl ${secondaryColor}`}
+                className={`font-robotoFlex font-bold text-xl md:text-2xl lg:text-4xl 2xl:text-5xl ${secondaryColor}`}
             >
                 <span className={`${textColor} font-menlo`}>00. </span> &lt;my github stats&gt;
             </h2>
             <div className="mt-7">
                 <GitHubCalendar
                     username="labheshwar"
-                    blockSize={blockSize} // Use the blockSize state here
+                    blockSize={blockSize}
                     colorScheme={theme === 'light' ? 'dark' : 'light'}
                     fontSize={blockSize}
                     blockMargin={blockSize === 8 ? 6 : 8}
@@ -66,6 +87,7 @@ const GitHub = () => {
                     }}
                     color="#fff"
                     theme={lightColorScheme}
+                    transformData={showHalfYear ? selectLastHalfYear : undefined}
                 />
             </div>
             <h2

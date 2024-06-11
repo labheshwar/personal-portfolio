@@ -56,7 +56,7 @@ function App() {
               backgroundImage: `url(${theme === 'light' ? LightImg : DarkImg})`,
             }}
           >
-            <Navbar />
+            <Navbar aos={Aos} />
             <Info />
             <AboutMe />
             <MyPortfolio />

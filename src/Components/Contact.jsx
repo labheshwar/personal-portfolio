@@ -23,7 +23,11 @@ const Contact = () => {
     theme === 'light' ? 'text-secondary-dark' : 'text-secondary-light';
 
   return (
-    <main className='flex flex-col px-8 md:px-20 py-8 md:py-20' id='contact'>
+    <main
+      className='flex flex-col px-8 md:px-20 py-8 md:py-20'
+      id='contact'
+      data-aos='fade-down-right'
+    >
       <h2
         className={`font-robotoFlex font-bold  text-xl md:text-2xl lg:text-4xl 2xl:text-5xl ${secondaryColor}`}
       >
@@ -43,6 +47,8 @@ const Contact = () => {
               href='mailto:labheshwar.work@gmail.com'
               target='_blank'
               rel='noreferrer'
+              data-aos='fade-right'
+              data-aos-duration='300'
             >
               {theme === 'dark' ? (
                 <img
@@ -62,6 +68,8 @@ const Contact = () => {
               href='https://www.github.com/labheshwar'
               target='_blank'
               rel='noreferrer'
+              data-aos='fade-right'
+              data-aos-duration='450'
             >
               {theme === 'dark' ? (
                 <img
@@ -81,6 +89,8 @@ const Contact = () => {
               href='https://www.linkedin.com/in/labheshwar'
               target='_blank'
               rel='noreferrer'
+              data-aos='fade-right'
+              data-aos-duration='600'
             >
               {theme === 'dark' ? (
                 <img
@@ -98,6 +108,8 @@ const Contact = () => {
             </a>
           </div>
           <button
+            data-aos='fade-left'
+            data-aos-duration='500'
             className={`font-menlo ${backgroundColor}  md:w-44 2xl:w-60 2xl:h-16 h-14 rounded-xl ${buttonSecondaryTextColor} hover:bg-opacity-80 text-xl`}
           >
             <a

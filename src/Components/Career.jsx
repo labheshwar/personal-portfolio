@@ -12,7 +12,11 @@ const Career = () => {
     theme === 'light' ? 'text-secondary-dark' : 'text-secondary-light';
 
   return (
-    <main className='flex flex-col px-8 md:px-20 mt-8 md:mt-20' id='career'>
+    <main
+      className='flex flex-col px-8 md:px-20 mt-8 md:mt-20'
+      id='career'
+      data-aos='fade-down-right'
+    >
       <h2
         className={`font-robotoFlex font-bold  text-xl md:text-2xl lg:text-4xl 2xl:text-5xl ${secondaryColor}`}
       >

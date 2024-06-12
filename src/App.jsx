@@ -15,7 +15,7 @@ import GitHub from './Components/GitHub';
 import Aos from 'aos';
 
 function App() {
-  const [theme, setTheme] = useState(() => localStorage.getItem('portfolioTheme'));
+  const [theme, setTheme] = useState(() => localStorage.getItem('portfolioTheme') || 'dark');
   const [isLoading, setIsLoading] = useState(true);
 
   const toggleTheme = () => {

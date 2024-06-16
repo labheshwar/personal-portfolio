@@ -37,7 +37,11 @@ const Career = () => {
           `;
 
           return (
-            <div className={containerClasses.trim()} key={index}>
+            <div
+              data-aos={`flip-${isLeft ? 'left' : 'right'}`}
+              className={containerClasses.trim()}
+              key={index}
+            >
               <div
                 className={`border-2 w-full ${borderColor} p-4 md:p-5 lg:p-6 flex flex-col gap-5`}
               >
@@ -72,15 +76,15 @@ const Career = () => {
                         listStylePosition: 'outside',
                       }}
                     >
-                    <p
-                      className={`font-robotoFlex text-md md:text-lg lg:text-xl font-medium ${secondaryColor} opacity-80`}
-                      style={{
-                        listStyleType: 'disc',
-                        listStylePosition: 'outside',
-                      }}
-                    >
-                      {desc}
-                    </p>
+                      <p
+                        className={`font-robotoFlex text-md md:text-lg lg:text-xl font-medium ${secondaryColor} opacity-80`}
+                        style={{
+                          listStyleType: 'disc',
+                          listStylePosition: 'outside',
+                        }}
+                      >
+                        {desc}
+                      </p>
                     </li>
                   ))}
                 </ul>

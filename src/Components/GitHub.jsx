@@ -23,7 +23,7 @@ const GitHub = () => {
         ],
         light: [
             '#C8F3F0',
-            '#9FEDE8',
+            '#97E7E1',
             '#77E7E1',
             '#4EE0D9',
             '#00D1C7',

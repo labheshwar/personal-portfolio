@@ -34,3 +34,107 @@
 ::-webkit-scrollbar-track {
   background: rgba(0, 0, 0, 0.2);
 }
+
+.experience-container {
+  position: relative;
+}
+
+.experience-container::before {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 3px solid #646aff;
+  height: 50px;
+}
+
+.experience-container.left::after {
+  content: '';
+  position: absolute;
+  bottom: -100px;
+  left: calc(50% - 97px);
+  transform: translateX(-50%);
+  width: 200px;
+  height: 50px;
+  border-left: 4px solid #646aff;
+  border-top: 4px solid #646aff;
+}
+
+.experience-container.right::after {
+  content: '';
+  position: absolute;
+  bottom: -100px;
+  left: calc(50% + 97px);
+  transform: translateX(-50%);
+  width: 200px;
+  height: 50px;
+  border-right: 4px solid #646aff;
+  border-top: 4px solid #646aff;
+}
+
+.experience-container.dark::before {
+  border-color: #00d1c7;
+}
+
+.experience-container.dark::before.light {
+  border-color: #646aff;
+}
+
+.experience-container.dark::after {
+  border-color: #00d1c7;
+}
+
+.experience-container.dark::after.light {
+  border-color: #646aff;
+}
+
+@media (max-width: 767px) {
+  .experience-container.left::after,
+  .experience-container.right::after {
+    border: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .experience-container.left::after,
+  .experience-container.right::after {
+    width: 300px;
+    height: 50px;
+  }
+  .experience-container.left::after {
+    left: calc(50% - 147px);
+  }
+  .experience-container.right::after {
+    left: calc(50% + 147px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .experience-container.left::after,
+  .experience-container.right::after {
+    width: 500px;
+    height: 50px;
+  }
+  .experience-container.left::after {
+    left: calc(50% - 247px);
+  }
+  .experience-container.right::after {
+    left: calc(50% + 247px);
+  }
+}
+
+@media (min-width: 1500px) {
+  .experience-container.left::after,
+  .experience-container.right::after {
+    width: 650px;
+    height: 50px;
+  }
+  .experience-container.left::after {
+    left: calc(50% - 322px);
+  }
+  .experience-container.right::after {
+    left: calc(50% + 322px);
+  }
+}
+

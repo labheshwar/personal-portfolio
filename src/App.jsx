@@ -53,19 +53,22 @@ function App() {
       ) : (
         <>
           <div
-            className={`bg-fixed bg-cover bg-no-repeat min-h-screen min-w-full overflow-x-hidden`}
+            className={`relative bg-fixed bg-cover bg-no-repeat min-h-screen min-w-full overflow-x-hidden`}
             style={{
               backgroundImage: `url(${theme === 'light' ? LightImg : DarkImg})`,
             }}
           >
-            <Navbar aos={Aos} />
-            <Info />
-            <AboutMe />
-            <MyPortfolio />
-            <Skills />
-            <GitHub />
-            <Career />
-            <Contact />
+            <div className="absolute inset-0 bg-black" style={{opacity: "0.01"}}></div>
+            <div className="relative">
+              <Navbar aos={Aos} />
+              <Info />
+              <AboutMe />
+              <MyPortfolio />
+              <Skills />
+              <GitHub />
+              <Career />
+              <Contact />
+            </div>
           </div>
         </>
       )}

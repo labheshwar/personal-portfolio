@@ -63,83 +63,99 @@ export const experience = [
     position: 'Associate Software Engineer',
     company: 'PaysysLabs',
     duration: 'Oct-2023 to Present',
+    description: [
+      'Worked on key projects OneLink 1GO Raast P2M, primarily responsible for building and managing the frontend using React.js and optimizing data with Redux.',
+      'Focused on improving legacy code, fixing bugs, and enhancing stability.',
+      'Set up CI/CD pipelines for automatic code building and deployment.',
+      'Developed RESTful APIs using Spring Boot and worked on Node.js projects for cron jobs.',
+      'Followed agile methodologies, working in sprints to deliver parts of the project on time.',
+      'Participated in regular meetings to discuss progress, adjust plans, and ensure deadlines were met.',
+      'Collaborated with the team to create secure, reliable software trusted by users.',
+    ],
   },
   {
     position: 'Frontend Developer',
     company: 'Transviti',
     duration: 'July-2023 to Oct-2023',
+    description: [
+      'I worked on diverse projects, including developing a social media application and enterprise solutions.',
+      'Led the development of a comprehensive chat system from the ground up, which included features like real-time messaging, group chat capabilities, and secure file sharing.',
+      'Built an interactive and dynamic dashboard using the latest plotting and charting technologies, allowing users to customize the layout according to their needs.',
+      'Stayed updated with the latest technology trends and implemented best practices to ensure our code was reusable, maintainable, and of the highest quality.',
+    ],
   },
   {
     position: 'MERN Stack Intern',
     company: 'Hostelin',
     duration: 'Oct-2022 to Dec-2022',
-  },
-  {
-    position: 'MERN Stack Apprentice',
-    company: 'Slim Coder',
-    duration: 'Jan-2022 to Apr-2022',
+    description: [
+      'Developed a hostel booking platform from scratch using the MERN stack (MongoDB, Express.js, React.js, Node.js).',
+      'Designed modern looking frontend with a standard format and separate modules.',
+      'Designed project structure and developed APIs using Express.js with MongoDB being the primary database.',
+      'Integrated third-party APIs for geolocation.',
+    ]    
   },
 ];
 
 export const skills = [
   {
-    name: "JavaScript",
-    rank: 5
+    name: 'JavaScript',
+    rank: 5,
   },
   {
-    name: "TypeScript",
-    rank: 3
+    name: 'TypeScript',
+    rank: 3,
   },
   {
-    name: "Next.js",
-    rank: 4
+    name: 'Next.js',
+    rank: 4,
   },
   {
-    name: "React.js",
-    rank: 5
+    name: 'React.js',
+    rank: 5,
   },
   {
-    name: "Redux.js",
-    rank: 4
+    name: 'Redux.js',
+    rank: 4,
   },
   {
-    name: "Tailwind",
-    rank: 4
+    name: 'Tailwind',
+    rank: 4,
   },
   {
-    name: "Testing Library",
-    rank: 3
+    name: 'Testing Library',
+    rank: 3,
   },
   {
-    name: "Material UI",
-    rank: 4
+    name: 'Material UI',
+    rank: 4,
   },
   {
-    name: "Node.js",
-    rank: 4
+    name: 'Node.js',
+    rank: 4,
   },
   {
-    name: "Express.js",
-    rank: 4
+    name: 'Express.js',
+    rank: 4,
   },
   {
-    name: "SQL",
-    rank: 4
+    name: 'SQL',
+    rank: 4,
   },
   {
-    name: "Java",
-    rank: 4
+    name: 'Java',
+    rank: 4,
   },
   {
-    name: "Spring Boot",
-    rank: 3
+    name: 'Spring Boot',
+    rank: 3,
   },
   {
-    name: "Git",
-    rank: 4
+    name: 'Git',
+    rank: 4,
   },
   {
-    name: "Jira",
-    rank: 3
+    name: 'Jira',
+    rank: 3,
   },
-]
+];

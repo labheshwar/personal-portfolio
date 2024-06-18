@@ -77,7 +77,7 @@ const Career = () => {
                       }}
                     >
                       <p
-                        className={`font-robotoFlex text-md md:text-lg lg:text-xl font-medium ${secondaryColor} opacity-80`}
+                        className={`font-robotoFlex text-base md:text-lg lg:text-xl font-medium ${secondaryColor} opacity-80`}
                         style={{
                           listStyleType: 'disc',
                           listStylePosition: 'outside',

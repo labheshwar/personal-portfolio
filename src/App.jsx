@@ -13,6 +13,7 @@ import Contact from './Components/Contact';
 import Loader from './Components/Loader';
 import GitHub from './Components/GitHub';
 import Aos from 'aos';
+import ScrollToTop from './Components/ScrollToTop';
 
 function App() {
   const [theme, setTheme] = useState(() => localStorage.getItem('portfolioTheme') || 'dark');
@@ -60,7 +61,7 @@ function App() {
           >
             <div className="absolute inset-0 bg-black" style={{opacity: "0.01"}}></div>
             <div className="relative">
-              <Navbar aos={Aos} />
+              <Navbar />
               <Info />
               <AboutMe />
               <MyPortfolio />
@@ -68,6 +69,7 @@ function App() {
               <GitHub />
               <Career />
               <Contact />
+              <ScrollToTop />
             </div>
           </div>
         </>

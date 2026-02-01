@@ -1,8 +1,40 @@
 export const portfolioData = [
   {
+    name: 'Acquiring Suite',
+    description:
+      'Enterprise-grade international acquiring and payment processing platform with Back Office for merchant management and Merchant Portal for transaction dashboards. Features multi-step onboarding, bulk QR generation, role-based permissions, and real-time analytics.',
+    techStack: [
+      'TypeScript',
+      'Next.js',
+      'React',
+      'Redux',
+      'Zustand',
+      'Zod',
+      'React Query',
+      'Ant Design',
+      'Tailwind CSS',
+      'Node.js',
+      'SQL',
+      'Oracle',
+      'Jest',
+    ],
+    githubLink: '#',
+    demoLink: '#',
+    isProfessional: true,
+  },
+  {
+    name: 'TaskVare',
+    description:
+      'Modular, customizable dashboard with drag-and-drop layout functionality using React DnD. Features real-time messaging with SignalR integration and interactive data visualization using g2Plots for project analytics.',
+    techStack: ['React', 'Redux', 'Material-UI', 'SignalR', 'g2Plots', 'Node.js'],
+    githubLink: '#',
+    demoLink: '#',
+    isProfessional: true,
+  },
+  {
     name: 'Students Guide',
     description:
-      'The Students Guide, a university FYP, enhances education through classroom tools, job searches, and course suggestions for Students, Teachers, Admins, and Superadmins.',
+      'University FYP enhancing education through classroom tools, job searches, and course suggestions. Multi-role platform supporting Students, Teachers, Admins, and Superadmins with real-time features.',
     techStack: [
       'Next.js',
       'TailwindCSS',
@@ -11,7 +43,6 @@ export const portfolioData = [
       'Express.js',
       'MongoDB',
       'Socket.io',
-      'Nodemailer',
       'AWS S3',
     ],
     githubLink: 'https://github.com/labheshwar/students-guide',
@@ -20,142 +51,69 @@ export const portfolioData = [
   {
     name: 'Reactive Express',
     description:
-      'Reactive Express is a full-stack E-Commerce website built with MERN Stack. It has features like Authentication, Cart, Payment Gateway, etc.',
-    techStack: [
-      'React.js',
-      'Node.js',
-      'Express.js',
-      'MongoDB',
-      'Redux',
-      'Stripe',
-    ],
+      'Full-stack E-Commerce platform with complete user authentication, shopping cart functionality, Stripe payment integration, and order management system.',
+    techStack: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Redux', 'Stripe'],
     githubLink: 'https://github.com/labheshwar/ReactiveExpress',
     demoLink: 'https://reactive-express.vercel.app/',
-  },
-  {
-    name: 'Gym Exercises',
-    description:
-      'Gym Exercises is a Website for people who want to learn about different exercises for different body parts. Used Youtube API to fetch on search.',
-    techStack: ['React.js', 'Material UI', 'Youtube API'],
-    githubLink: 'https://github.com/labheshwar/Gym-Exercises',
-    demoLink: 'https://goldsgymexercises.netlify.app/',
-  },
-  {
-    name: 'Tenzies Game',
-    description:
-      'Tenzies is a dice game. It is part of Scrimba React Bootcamp by Bob Ziroll.',
-    techStack: ['React.js'],
-    githubLink: 'https://github.com/labheshwar/tenzies-game',
-    demoLink: 'https://tenziesgamebylabheshwar.netlify.app/',
-  },
-  {
-    name: 'Hair Day',
-    description:
-      'Hair Day is a home page website for a hair salon. It is graded assignment of Meta Frontend Professional Certificate program.',
-    techStack: ['HTML', 'CSS'],
-    githubLink: 'https://hairdaybylabheshwar.netlify.app/',
-    demoLink: 'https://hairdaybylabheshwar.netlify.app/',
   },
 ];
 
 export const experience = [
   {
-    position: 'Associate Software Engineer',
+    position: 'Software Engineer',
     company: 'PaysysLabs',
-    duration: 'Oct-2023 to Present',
+    location: 'Karachi (Onsite)',
+    duration: 'Oct 2023 – Present',
     description: [
-      'Worked on key projects OneLink 1GO Raast P2M, primarily responsible for building and managing the frontend using React.js and optimizing data with Redux.',
-      'Focused on improving legacy code, fixing bugs, and enhancing stability.',
-      'Set up CI/CD pipelines for automatic code building and deployment.',
-      'Developed RESTful APIs using Spring Boot and worked on Node.js projects for cron jobs.',
-      'Followed agile methodologies, working in sprints to deliver parts of the project on time.',
-      'Participated in regular meetings to discuss progress, adjust plans, and ensure deadlines were met.',
-      'Collaborated with the team to create secure, reliable software trusted by users.',
+      'Led end-to-end development of international acquiring suite, scaling local platform to international market demands within 2.5 months.',
+      'Delivered Back Office (merchant management) and Merchant Portal (transaction dashboard) through weekly sprint cycles.',
+      'Architected reusable Base API class with error handling, authentication, and response transformation.',
+      'Implemented Container/Presentation pattern for improved testability and code reusability.',
+      'Applied Adapter pattern to standardize third-party payment gateway integrations.',
+      'Built dynamic multi-step Merchant Onboarding with conditional fields, validations, and role-based access.',
+      'Created responsive Merchant Portal with transaction monitoring, transfers, withdrawals, and dashboards.',
+      'Integrated React Query for efficient state management and reduced API calls.',
+      'Built TOTP two-factor authentication using Node.js, Express, and Speakeasy.',
+      'Automated SFTP processes with Node.js cron jobs, eliminating manual work.',
+      'Integrated Spring Boot REST APIs for payment processing and data services.',
     ],
   },
   {
     position: 'Frontend Developer',
     company: 'Transviti',
-    duration: 'July-2023 to Oct-2023',
+    location: 'Karachi (Hybrid)',
+    duration: 'July 2023 – Sept 2023',
     description: [
-      'I worked on diverse projects, including developing a social media application and enterprise solutions.',
-      'Led the development of a comprehensive chat system from the ground up, which included features like real-time messaging, group chat capabilities, and secure file sharing.',
-      'Built an interactive and dynamic dashboard using the latest plotting and charting technologies, allowing users to customize the layout according to their needs.',
-      'Stayed updated with the latest technology trends and implemented best practices to ensure our code was reusable, maintainable, and of the highest quality.',
+      'Built TaskVare dashboard with drag-and-drop functionality using React DnD, allowing users to customize layouts.',
+      'Implemented end-to-end real-time messaging system using SignalR with skeleton loaders for enhanced UX.',
+      'Developed responsive, modern UI components using Material-UI, Redux for state management, and g2Plots for data visualization.',
+      'Optimized component rendering and implemented code-splitting strategies for improved application performance.',
     ],
-  },
-  {
-    position: 'MERN Stack Intern',
-    company: 'Hostelin',
-    duration: 'Oct-2022 to Dec-2022',
-    description: [
-      'Developed a hostel booking platform from scratch using the MERN stack (MongoDB, Express.js, React.js, Node.js).',
-      'Designed modern looking frontend with a standard format and separate modules.',
-      'Designed project structure and developed APIs using Express.js with MongoDB being the primary database.',
-      'Integrated third-party APIs for geolocation.',
-    ]    
   },
 ];
 
-export const skills = [
-  {
-    name: 'JavaScript',
-    rank: 5,
-  },
-  {
-    name: 'TypeScript',
-    rank: 3,
-  },
-  {
-    name: 'Next.js',
-    rank: 4,
-  },
-  {
-    name: 'React.js',
-    rank: 5,
-  },
-  {
-    name: 'Redux.js',
-    rank: 4,
-  },
-  {
-    name: 'Tailwind',
-    rank: 4,
-  },
-  {
-    name: 'Testing Library',
-    rank: 3,
-  },
-  {
-    name: 'Material UI',
-    rank: 4,
-  },
-  {
-    name: 'Node.js',
-    rank: 4,
-  },
-  {
-    name: 'Express.js',
-    rank: 4,
-  },
-  {
-    name: 'SQL',
-    rank: 4,
-  },
-  {
-    name: 'Java',
-    rank: 4,
-  },
-  {
-    name: 'Spring Boot',
-    rank: 3,
-  },
-  {
-    name: 'Git',
-    rank: 4,
-  },
-  {
-    name: 'Jira',
-    rank: 3,
-  },
-];
+export const skills = {
+  languages: ['JavaScript', 'TypeScript', 'Java'],
+  frameworks: ['React', 'Next.js', 'Node.js', 'Express.js', 'Redux', 'Zod', 'Zustand'],
+  webServices: ['REST API', 'SignalR', 'Socket.io', 'Axios', 'React Query'],
+  uiLibraries: ['Tailwind CSS', 'Material UI', 'Ant Design', 'React Bootstrap', 'Shad CN'],
+  tools: ['VSCode', 'GitHub', 'Git', 'Bitbucket', 'Remix'],
+  others: ['Prisma', 'MongoDB Atlas', 'Ether.js', 'OOP', 'Jest'],
+};
+
+export const education = {
+  degree: 'Bachelors in Computer Science',
+  cgpa: '3.93/4.0',
+  university: 'University of Sindh',
+};
+
+export const personalInfo = {
+  name: 'LABHESHWAR',
+  title: 'Software Engineer',
+  email: 'labheshwar.work@gmail.com',
+  phone: '+923438370414',
+  linkedin: 'https://www.linkedin.com/in/labheshwar',
+  github: 'https://www.github.com/labheshwar',
+  bio: 'Full-stack Software Engineer with around 3 years of experience in designing and building enterprise-grade applications using React, Next.js, and TypeScript. Successfully led end-to-end development of an international acquiring and payment processing platform for PaysysLabs.',
+  tagline: 'Delivering scalable solutions under tight deadlines while maintaining clean architecture and high code quality.',
+};

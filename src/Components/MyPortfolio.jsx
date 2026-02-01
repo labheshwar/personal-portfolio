@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import { motion } from 'framer-motion';
 import ThemeContext from '../ThemeContext';
 import { ProjectCard } from './ProjectCard';
 import { portfolioData } from '../config';
@@ -6,47 +7,90 @@ import { portfolioData } from '../config';
 const MyPortfolio = () => {
   const { theme } = useContext(ThemeContext);
 
-  const textColor =
-    theme === 'light' ? 'text-primary-light' : 'text-primary-dark';
+  const primaryColor = theme === 'light' ? 'text-primary-light' : 'text-primary-dark';
+  const secondaryColor = theme === 'light' ? 'text-secondary-dark' : 'text-secondary-light';
 
-  const secondaryColor =
-    theme === 'light' ? 'text-secondary-dark' : 'text-secondary-light';
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: { duration: 0.6, ease: 'easeOut' }
+    },
+  };
 
   return (
-    <main className='flex flex-col px-8 md:px-20 mt-8 md:mt-20' id='portfolio'>
-      <h2
-        className={`font-robotoFlex font-bold  text-xl md:text-2xl lg:text-4xl 2xl:text-5xl ${secondaryColor}`}
-      >
-        <span className={`${textColor} font-menlo`}>02. </span> &lt;my
-        portfolio&gt;
-      </h2>
-      <p
-        className={`font-roboto font-light text-lg md:text-xl lg:text-2xl 2xl:text-3xl mt-8 ${secondaryColor}`}
-      >
-        A small gallery of my recent projects. My main tech stack is MERN Stack
-        and most of my projects are built with it. Here are a few.
-      </p>
-      <div className='flex flex-wrap justify-between'>
-        {portfolioData.map((project, index) => (
-          <ProjectCard
-            key={index}
-            theme={theme}
-            name={project.name}
-            description={project.description}
-            techStack={project.techStack}
-            githubLink={project.githubLink}
-            demoLink={project.demoLink}
-            dataAos={index % 2 === 0 ? 'fade-down-right' : 'fade-down-left'}
-          />
-        ))}
-      </div>
+    <motion.section
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-100px" }}
+      variants={containerVariants}
+      className="px-6 md:px-20 py-20"
+      id="portfolio"
+    >
+      <div className="max-w-7xl mx-auto">
+        {/* Section Header */}
+        <motion.div variants={itemVariants} className="mb-12">
+          <div className="flex items-center gap-4 mb-4">
+            <span className={`font-jetbrains text-sm ${primaryColor}`}>01.</span>
+            <h2 className={`font-inter font-bold text-2xl md:text-4xl ${secondaryColor}`}>
+              Featured Projects
+            </h2>
+            <motion.div 
+              initial={{ width: 0 }}
+              whileInView={{ width: '100px' }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              className={`h-[1px] ${theme === 'dark' ? 'bg-primary-dark/50' : 'bg-primary-light/50'}`}
+            />
+          </div>
+          <p className={`font-jetbrains text-xs ${primaryColor} opacity-60`}>
+            {'// some things I have built'}
+          </p>
+        </motion.div>
 
-      <h2
-        className={`font-robotoFlex font-bold mt-8 self-end text-lg md:text-xl lg:text-3xl 2xl:text-4xl opacity-30 ${secondaryColor}`}
-      >
-        &lt;/my portfolio&gt;
-      </h2>
-    </main>
+        {/* Description */}
+        <motion.p 
+          variants={itemVariants}
+          className={`font-inter text-base md:text-lg ${secondaryColor} opacity-80 max-w-3xl mb-10`}
+        >
+          A curated collection of projects showcasing my expertise in building enterprise-grade 
+          applications, fintech solutions, and modern web experiences.
+        </motion.p>
+
+        {/* Projects Grid */}
+        <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+          {portfolioData.map((project, index) => (
+            <motion.div
+              key={project.name}
+              variants={itemVariants}
+              custom={index}
+            >
+              <ProjectCard
+                theme={theme}
+                name={project.name}
+                description={project.description}
+                techStack={project.techStack}
+                githubLink={project.githubLink}
+                demoLink={project.demoLink}
+                isProfessional={project.isProfessional}
+                index={index}
+              />
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </motion.section>
   );
 };
 

@@ -192,7 +192,7 @@ const GitHub = () => {
                     </motion.div>
 
                     {/* Legend */}
-                    <div className="flex items-center justify-end gap-2 mt-6">
+                    {/* <div className="flex items-center justify-end gap-2 mt-6">
                         <span className={`font-jetbrains text-xs ${secondaryColor} opacity-60`}>Less</span>
                         <div className="flex gap-1">
                             {(theme === 'dark' ? colorScheme.light : colorScheme.dark).map((color, index) => (
@@ -208,7 +208,7 @@ const GitHub = () => {
                             ))}
                         </div>
                         <span className={`font-jetbrains text-xs ${secondaryColor} opacity-60`}>More</span>
-                    </div>
+                    </div> */}
                 </motion.div>
             </div>
         </motion.section>

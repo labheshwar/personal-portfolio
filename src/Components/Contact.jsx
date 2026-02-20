@@ -111,8 +111,10 @@ const Contact = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.3 + index * 0.1 }}
-                    className={`p-4 rounded-xl ${
-                      theme === 'dark' ? 'bg-white/5' : 'bg-black/5'
+                    className={`p-4 rounded-xl border ${
+                      theme === 'dark' 
+                        ? 'bg-primary-dark/10 border-primary-dark/20' 
+                        : 'bg-primary-light/10 border-primary-light/20'
                     }`}
                   >
                     <span className="text-2xl">{stat.icon}</span>

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import ThemeContext from '../ThemeContext';
 import { personalInfo } from '../config';
 import Resume from '../Assets/LabheshwarResume.pdf';
+import ProfilePic from '../Assets/img/profile-pic.jpg';
 
 // Typing Animation Hook
 const useTypingEffect = (texts, typingSpeed = 100, deletingSpeed = 50, pauseTime = 2000) => {
@@ -255,7 +256,7 @@ const Info = () => {
             className={`relative w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden ${pulseGlow}`}
           >
             <img
-              src="../Assets/img/profile-pic.jpg"
+              src={ProfilePic}
               alt="Labheshwar"
               className="w-full h-full object-cover"
             />

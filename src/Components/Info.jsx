@@ -255,7 +255,7 @@ const Info = () => {
             className={`relative w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden ${pulseGlow}`}
           >
             <img
-              src="../../Assets/img/profile-pic.jpg"
+              src="../Assets/img/profile-pic.jpg"
               alt="Labheshwar"
               className="w-full h-full object-cover"
             />

@@ -255,7 +255,7 @@ const Info = () => {
             className={`relative w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden ${pulseGlow}`}
           >
             <img
-              src="https://media.licdn.com/dms/image/v2/D4D03AQElbe-ZBH1Wng/profile-displayphoto-crop_800_800/B4DZlG9oQ6JQAI-/0/1757832186802?e=1771459200&v=beta&t=pv2SCiMRKXLE_bF_J9du3tddlcy8jtftV6K50W5osJ0"
+              src="../../Assets/img/profile-pic.jpg"
               alt="Labheshwar"
               className="w-full h-full object-cover"
             />

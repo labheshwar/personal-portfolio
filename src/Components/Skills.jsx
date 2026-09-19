@@ -31,12 +31,13 @@ const Skills = () => {
   };
 
   const skillCategories = [
-    { title: 'Languages', icon: '💻', items: skills.languages },
-    { title: 'Frameworks & Libraries', icon: '⚛️', items: skills.frameworks },
-    { title: 'Web Services', icon: '🌐', items: skills.webServices },
-    { title: 'UI Libraries', icon: '🎨', items: skills.uiLibraries },
-    { title: 'Tools', icon: '🛠️', items: skills.tools },
-    { title: 'Others', icon: '📦', items: skills.others },
+    { title: 'Languages', items: skills.languages },
+    { title: 'Backend', items: skills.backend },
+    { title: 'Frontend', items: skills.frontend },
+    { title: 'Databases', items: skills.databases },
+    { title: 'DevOps & Tools', items: skills.devOpsTools },
+    { title: 'AI & Security', items: skills.aiSecurity },
+    { title: 'Practices', items: skills.practices },
   ];
 
   return (
@@ -71,7 +72,7 @@ const Skills = () => {
 
         {/* Skills Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {skillCategories.map((category, categoryIndex) => (
+          {skillCategories.map((category) => (
             <motion.div
               key={category.title}
               variants={itemVariants}
@@ -80,15 +81,6 @@ const Skills = () => {
             >
               {/* Category Header */}
               <div className="flex items-center gap-3 mb-4">
-                <motion.span 
-                  initial={{ scale: 0 }}
-                  whileInView={{ scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.3 + categoryIndex * 0.1, type: 'spring' }}
-                  className="text-2xl"
-                >
-                  {category.icon}
-                </motion.span>
                 <h3 className={`font-inter font-semibold text-lg ${primaryColor}`}>
                   {category.title}
                 </h3>

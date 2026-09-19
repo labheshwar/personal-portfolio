@@ -46,8 +46,8 @@ const Info = () => {
   // Claims a reviewer can verify beat self-awarded titles like "Expert".
   // The fintech/payments line is the real differentiator against other React devs.
   const roles = [
-    'Software Engineer',
-    'Full-Stack Developer',
+    'Full-Stack Engineer',
+    'Java + Spring Boot',
     'React + TypeScript',
     'Fintech & Payments',
   ];
@@ -70,9 +70,9 @@ const Info = () => {
   };
 
   const stats = [
-    { value: '3+', label: 'Years in production React' },
-    { value: '2.5', unit: 'mo', label: 'To ship an international payments suite' },
-    { value: '2', label: 'Payment platforms shipped' },
+    { value: '3+', label: 'Years shipping fintech platforms' },
+    { value: '40', unit: '%', label: 'LCP lift from a reusable component library' },
+    { value: '50', unit: '+', label: 'Dependencies scanned in CI via Snyk' },
   ];
 
   return (

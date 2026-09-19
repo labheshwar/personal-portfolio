@@ -12,22 +12,35 @@ import Contact from './Components/Contact';
 import ScrollToTop from './Components/ScrollToTop';
 
 const GitHub = lazy(() => import('./Components/GitHub'));
-const QrDecoder = lazy(() => import('./Components/QrDecoder'));
 
 
-// A single calm wash instead of drifting orbs — depth without motion cost.
-const AmbientWash = ({ theme }) => (
-  <div className="fixed inset-0 overflow-hidden pointer-events-none z-0" aria-hidden="true">
-    <div
-      className="absolute inset-0"
-      style={{
-        background: theme === 'dark'
-          ? 'radial-gradient(900px 600px at 12% -5%, rgba(0,209,199,0.10), transparent 60%), radial-gradient(700px 500px at 95% 10%, rgba(0,245,160,0.06), transparent 60%)'
-          : 'radial-gradient(900px 600px at 12% -5%, rgba(100,106,255,0.12), transparent 60%), radial-gradient(700px 500px at 95% 10%, rgba(139,92,246,0.08), transparent 60%)',
-      }}
-    />
-  </div>
-);
+// Aurora backdrop: depth and colour without the cost of the old particle
+// field. Animates transform only, and freezes under prefers-reduced-motion.
+const AmbientWash = ({ theme }) => {
+  const blobs = theme === 'dark'
+    ? [
+        { cls: 'aurora-a', color: 'rgba(0,209,199,0.13)', style: { top: '-14%', left: '-6%', width: '46vw', height: '46vw' } },
+        { cls: 'aurora-b', color: 'rgba(0,245,160,0.09)', style: { top: '18%', right: '-10%', width: '40vw', height: '40vw' } },
+        { cls: 'aurora-c', color: 'rgba(56,130,246,0.07)', style: { bottom: '-18%', left: '22%', width: '44vw', height: '44vw' } },
+      ]
+    : [
+        { cls: 'aurora-a', color: 'rgba(100,106,255,0.14)', style: { top: '-14%', left: '-6%', width: '46vw', height: '46vw' } },
+        { cls: 'aurora-b', color: 'rgba(139,92,246,0.10)', style: { top: '18%', right: '-10%', width: '40vw', height: '40vw' } },
+        { cls: 'aurora-c', color: 'rgba(56,189,248,0.08)', style: { bottom: '-18%', left: '22%', width: '44vw', height: '44vw' } },
+      ];
+
+  return (
+    <div className="fixed inset-0 overflow-hidden pointer-events-none z-0" aria-hidden="true">
+      {blobs.map((b) => (
+        <div
+          key={b.cls}
+          className={`aurora-blob ${b.cls}`}
+          style={{ ...b.style, background: b.color }}
+        />
+      ))}
+    </div>
+  );
+};
 
 // Grid Background Pattern
 const GridBackground = ({ theme }) => (
@@ -96,9 +109,6 @@ function App() {
                   below the projects or the contribution graph. */}
               <Career />
               <MyPortfolio />
-              <Suspense fallback={<div className="min-h-[28rem]" />}>
-                <QrDecoder />
-              </Suspense>
               <Skills />
               <Suspense fallback={<div className="min-h-[20rem]" />}>
                 <GitHub />

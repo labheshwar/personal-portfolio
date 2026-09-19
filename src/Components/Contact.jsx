@@ -72,7 +72,7 @@ const Contact = () => {
         {/* Section Header */}
         <motion.div variants={itemVariants} className="mb-12 text-center">
           <div className="flex items-center justify-center gap-4 mb-4">
-            <span className={`font-jetbrains text-sm ${primaryColor}`}>05.</span>
+            <span className={`font-jetbrains text-sm ${primaryColor}`}>04.</span>
             <h2 className={`font-inter font-bold text-2xl md:text-4xl ${secondaryColor}`}>
               Get In Touch
             </h2>

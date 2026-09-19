@@ -17,7 +17,6 @@ const Navbar = () => {
     { label: 'about', target: 'about' },
     { label: 'career', target: 'career' },
     { label: 'portfolio', target: 'portfolio' },
-    { label: 'decoder', target: 'decoder' },
     { label: 'skills', target: 'skills' },
     { label: 'contact', target: 'contact' },
   ];

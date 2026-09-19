@@ -47,14 +47,14 @@ body {
   
   /* Glassmorphism */
   .glass-light {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.72);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
   }
   
   .glass-dark {
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(12, 12, 12, 0.72);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -431,3 +431,34 @@ button:focus-visible {
     display: none;
   }
 }
+
+/* ── Aurora backdrop ──────────────────────────────────────────────────
+   Three large, heavily blurred blobs drifting slowly. Unlike the particle
+   field this replaced, it animates only `transform` on three composited
+   layers, so it stays off the main thread. The reduced-motion block above
+   freezes it. */
+.aurora-blob {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(90px);
+  will-change: transform;
+}
+
+@keyframes aurora-drift-a {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50%      { transform: translate3d(9vw, 5vh, 0) scale(1.14); }
+}
+
+@keyframes aurora-drift-b {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1.08); }
+  50%      { transform: translate3d(-7vw, -6vh, 0) scale(0.94); }
+}
+
+@keyframes aurora-drift-c {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(0.96); }
+  50%      { transform: translate3d(5vw, -8vh, 0) scale(1.1); }
+}
+
+.aurora-a { animation: aurora-drift-a 34s ease-in-out infinite; }
+.aurora-b { animation: aurora-drift-b 42s ease-in-out infinite; }
+.aurora-c { animation: aurora-drift-c 38s ease-in-out infinite; }

@@ -3,7 +3,6 @@ import { motion, useReducedMotion } from 'framer-motion';
 import ThemeContext from '../ThemeContext';
 import { personalInfo } from '../config';
 import Icon from './Icon';
-import Resume from '../Assets/LabheshwarResume.pdf';
 import ProfilePic from '../Assets/img/profile-pic.jpg';
 
 // Typing Animation Hook
@@ -69,10 +68,10 @@ const Info = () => {
     visible: { opacity: 1, transition: { staggerChildren: 0.09, delayChildren: 0.05 } },
   };
 
-  const stats = [
-    { value: '3+', label: 'Years shipping fintech platforms' },
-    { value: '40', unit: '%', label: 'LCP lift from a reusable component library' },
-    { value: '50', unit: '+', label: 'Dependencies scanned in CI via Snyk' },
+  const capabilities = [
+    { label: 'Backend', value: 'Java \u00b7 Spring Boot' },
+    { label: 'Frontend', value: 'React \u00b7 Next.js' },
+    { label: 'Platform', value: 'Docker \u00b7 Kubernetes' },
   ];
 
   return (
@@ -145,18 +144,15 @@ const Info = () => {
               isDark ? 'divide-white/10' : 'divide-black/10'
             }`}
           >
-            {stats.map((stat) => (
-              <div key={stat.label} className="py-5 px-4 first:pl-0">
-                <div className={`font-inter font-bold text-3xl md:text-4xl ${heading} tracking-tight`}>
-                  {stat.value}
-                  {stat.unit && (
-                    <span className={`text-lg md:text-xl font-medium ml-1 ${accent}`}>{stat.unit}</span>
-                  )}
-                </div>
+            {capabilities.map((cap) => (
+              <div key={cap.label} className="py-5 px-4 first:pl-0">
                 <div
-                  className={`mt-1.5 font-jetbrains text-[10px] md:text-[11px] leading-snug uppercase tracking-wider ${muted} opacity-70`}
+                  className={`font-jetbrains text-[10px] uppercase tracking-wider ${muted} opacity-60`}
                 >
-                  {stat.label}
+                  {cap.label}
+                </div>
+                <div className={`mt-1.5 font-inter text-[15px] md:text-base font-medium ${heading}`}>
+                  {cap.value}
                 </div>
               </div>
             ))}
@@ -165,7 +161,7 @@ const Info = () => {
           {/* CTAs */}
           <motion.div variants={rise} className="mt-10 flex flex-wrap items-center gap-3">
             <a
-              href={Resume}
+              href={personalInfo.resumeUrl}
               target="_blank"
               rel="noreferrer"
               className={`group inline-flex items-center gap-2.5 rounded-xl px-5 py-3.5 font-jetbrains text-sm
@@ -181,23 +177,8 @@ const Info = () => {
               }}
             >
               <Icon name="download" size={17} />
-              Download résumé
+              Résumé
             </a>
-
-            {personalInfo.resumeUrl && (
-              <a
-                href={personalInfo.resumeUrl}
-                target="_blank"
-                rel="noreferrer"
-                className={`inline-flex items-center gap-1.5 font-jetbrains text-[12px] ${muted}
-                            underline underline-offset-4 decoration-dotted transition-colors ${
-                              isDark ? 'hover:text-primary-dark' : 'hover:text-primary-light'
-                            }`}
-              >
-                <Icon name="external" size={13} />
-                View latest
-              </a>
-            )}
 
             <a
               href={`mailto:${personalInfo.email}`}

@@ -3,7 +3,7 @@ import { motion, useReducedMotion } from 'framer-motion';
 import ThemeContext from '../ThemeContext';
 import { personalInfo } from '../config';
 import Icon from './Icon';
-import ProfilePic from '../Assets/img/profile-pic.jpg';
+import HeroVisual from './HeroVisual';
 
 // Typing Animation Hook
 const useTypingEffect = (texts, typingSpeed = 100, deletingSpeed = 50, pauseTime = 2000) => {
@@ -216,53 +216,9 @@ const Info = () => {
           </motion.div>
         </div>
 
-        {/* ── Right: portrait, framed rather than floated ──────────────── */}
+        {/* ── Right: interactive composition ──────────────────────────── */}
         <motion.div variants={rise} className="order-2 flex justify-center lg:justify-end">
-          <div className="relative w-[230px] sm:w-[280px] lg:w-full lg:max-w-[380px]">
-            {/* Offset accent frame — depth without a glow halo */}
-            <div
-              className={`absolute -inset-px rounded-[26px] translate-x-3 translate-y-3 border ${
-                isDark ? 'border-primary-dark/35' : 'border-primary-light/35'
-              }`}
-              aria-hidden="true"
-            />
-
-            <div
-              className={`relative overflow-hidden rounded-[26px] border ${hairline} ${
-                isDark ? 'bg-white/[0.03]' : 'bg-black/[0.03]'
-              }`}
-            >
-              <img
-                src={ProfilePic}
-                alt="Labheshwar"
-                width="380"
-                height="440"
-                className="w-full aspect-[19/22] object-cover object-top"
-              />
-              {/* Tint ties the photo to the palette */}
-              <div
-                className={`pointer-events-none absolute inset-0 ${
-                  isDark
-                    ? 'bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/10 to-transparent'
-                    : 'bg-gradient-to-t from-white via-white/10 to-transparent'
-                }`}
-              />
-            </div>
-
-            {/* Overlapping credential card */}
-            <div
-              className={`absolute -bottom-5 -left-4 sm:-left-6 rounded-2xl border ${hairline} px-4 py-3
-                          backdrop-blur-xl ${isDark ? 'bg-[#101010]/90' : 'bg-white/90'}`}
-            >
-              <div className={`font-jetbrains text-[10px] uppercase tracking-wider ${muted} opacity-70`}>
-                Currently
-              </div>
-              <div className={`mt-0.5 font-inter text-sm font-semibold ${heading}`}>
-                Software Engineer
-              </div>
-              <div className={`font-jetbrains text-[11px] ${accent}`}>@ PaysysLabs</div>
-            </div>
-          </div>
+          <HeroVisual />
         </motion.div>
       </motion.div>
     </main>

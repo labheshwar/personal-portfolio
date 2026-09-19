@@ -124,6 +124,9 @@ export const personalInfo = {
   phone: '+923438370414',
   linkedin: 'https://www.linkedin.com/in/labheshwar',
   github: 'https://www.github.com/labheshwar',
+  // Always-current copy. The bundled PDF stays the primary download because
+  // it cannot 404 or sit behind a Drive permission prompt.
+  resumeUrl: 'https://drive.google.com/file/d/1mR1974zNZRugXw8oePAQLbdF6DG5v3it/view?usp=sharing',
   bio: 'Full-stack Software Engineer with 3 years of experience building enterprise-grade applications in React, Next.js, and TypeScript. I led end-to-end development of an international acquiring and payment processing platform at PaysysLabs, taking it from a local product to international market requirements in 2.5 months.',
   tagline: 'Delivering scalable solutions under tight deadlines while maintaining clean architecture and high code quality.',
 };

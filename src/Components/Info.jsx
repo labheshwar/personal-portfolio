@@ -184,6 +184,21 @@ const Info = () => {
               Download résumé
             </a>
 
+            {personalInfo.resumeUrl && (
+              <a
+                href={personalInfo.resumeUrl}
+                target="_blank"
+                rel="noreferrer"
+                className={`inline-flex items-center gap-1.5 font-jetbrains text-[12px] ${muted}
+                            underline underline-offset-4 decoration-dotted transition-colors ${
+                              isDark ? 'hover:text-primary-dark' : 'hover:text-primary-light'
+                            }`}
+              >
+                <Icon name="external" size={13} />
+                View latest
+              </a>
+            )}
+
             <a
               href={`mailto:${personalInfo.email}`}
               className={`inline-flex items-center gap-2.5 rounded-xl px-5 py-3.5 font-jetbrains text-sm

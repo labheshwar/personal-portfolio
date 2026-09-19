@@ -40,11 +40,13 @@ const useTypingEffect = (texts, typingSpeed = 100, deletingSpeed = 50, pauseTime
 const Info = () => {
   const { theme } = useContext(ThemeContext);
   
+  // Claims a reviewer can verify beat self-awarded titles like "Expert".
+  // The fintech/payments line is the real differentiator against other React devs.
   const roles = [
     'Software Engineer',
     'Full-Stack Developer',
-    'React Specialist',
-    'TypeScript Expert',
+    'React + TypeScript',
+    'Fintech & Payments',
   ];
   
   const typedText = useTypingEffect(roles, 100, 50, 2000);
@@ -129,8 +131,8 @@ const Info = () => {
             className="flex flex-wrap gap-6 py-4"
           >
             {[
-              { value: '3+', label: 'Years Experience' },
-              { value: '10+', label: 'Projects Delivered' },
+              { value: '3+', label: 'Years in production React' },
+              { value: '2.5 mo', label: 'To ship an international payments suite' },
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -269,29 +271,6 @@ const Info = () => {
             }`} />
           </motion.div>
 
-          {/* Floating Tech Icons */}
-          {['⚛️', '📱', '🚀'].map((emoji, index) => (
-            <motion.div
-              key={index}
-              animate={{
-                y: [0, -10, 0],
-                rotate: [0, 10, -10, 0],
-              }}
-              transition={{
-                duration: 3,
-                delay: index * 0.5,
-                repeat: Infinity,
-                ease: 'easeInOut',
-              }}
-              className={`absolute text-2xl ${
-                index === 0 ? 'top-0 right-0' : 
-                index === 1 ? 'bottom-0 left-0' : 
-                'top-1/2 -right-8'
-              }`}
-            >
-              {emoji}
-            </motion.div>
-          ))}
         </motion.div>
       </motion.div>
     </main>

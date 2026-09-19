@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import { useState, useEffect, useRef } from 'react';
 
 const SkillBox = ({ theme, skillRank, skillName }) => {
@@ -90,11 +89,5 @@ const SkillBox = ({ theme, skillRank, skillName }) => {
     </div>
   );
 };
-
-SkillBox.propTypes = {
-  theme: PropTypes.string.isRequired,
-  skillRank: PropTypes.number.isRequired,
-  skillName: PropTypes.string.isRequired
-}
 
 export default SkillBox;

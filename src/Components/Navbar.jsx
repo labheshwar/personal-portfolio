@@ -14,9 +14,9 @@ const Navbar = () => {
 
   const navItems = [
     { label: 'about', target: 'about' },
+    { label: 'career', target: 'career' },
     { label: 'portfolio', target: 'portfolio' },
     { label: 'skills', target: 'skills' },
-    { label: 'career', target: 'career' },
     { label: 'contact', target: 'contact' },
   ];
 

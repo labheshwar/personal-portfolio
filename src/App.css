@@ -370,3 +370,54 @@ body {
   z-index: 1000;
 }
 
+
+/* ── Accessibility: keyboard skip link ───────────────────────────────── */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 2000;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0 0 0.75rem 0;
+  background: #00d1c7;
+  color: #0a0a0a;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
+/* Visible focus for keyboard users — the site previously relied on the
+   browser default, which the dark background washed out. */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #00d1c7;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ── Respect the visitor's motion preference ─────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .typing-cursor,
+  .pulse-glow-dark,
+  .pulse-glow-light,
+  .skill-bar {
+    animation: none !important;
+  }
+
+  .noise-overlay::before {
+    display: none;
+  }
+}

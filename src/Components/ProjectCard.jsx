@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
 
 export const ProjectCard = ({
@@ -9,6 +8,8 @@ export const ProjectCard = ({
   githubLink,
   demoLink,
   isProfessional,
+  isPrivate,
+  impact,
   index
 }) => {
   const primaryColor = theme === 'light' ? 'text-primary-light' : 'text-primary-dark';
@@ -24,7 +25,7 @@ export const ProjectCard = ({
       viewport={{ once: true }}
       transition={{ delay: index * 0.1 }}
       whileHover={{ y: -8, scale: 1.02 }}
-      className={`${glassClass} rounded-2xl p-6 h-full flex flex-col border ${borderGlass} ${hoverClass} group`}
+      className={`${glassClass} relative overflow-hidden rounded-2xl p-6 h-full flex flex-col border ${borderGlass} ${hoverClass} group`}
     >
       {/* Header */}
       <div className="flex justify-between items-start mb-4">
@@ -105,13 +106,40 @@ export const ProjectCard = ({
 
       {/* Content */}
       <div className="flex-1 flex flex-col">
-        <h3 className={`font-inter font-bold text-xl md:text-2xl ${secondaryColor} group-hover:${primaryColor} transition-colors mb-3`}>
+        <h3 className={`font-inter font-bold text-xl md:text-2xl ${secondaryColor} ${
+          theme === 'dark' ? 'group-hover:text-primary-dark' : 'group-hover:text-primary-light'
+        } transition-colors mb-3`}>
           {name}
         </h3>
         
-        <p className={`font-inter text-sm md:text-base ${secondaryColor} opacity-70 mb-6 leading-relaxed flex-1`}>
+        <p className={`font-inter text-sm md:text-base ${secondaryColor} opacity-70 mb-4 leading-relaxed`}>
           {description}
         </p>
+
+        {/* Impact — concrete outcomes, since a private repo cannot speak for itself */}
+        {impact?.length > 0 && (
+          <ul className="mb-4 space-y-1.5">
+            {impact.map((point) => (
+              <li
+                key={point}
+                className={`font-inter text-xs md:text-sm flex gap-2 ${secondaryColor} opacity-80`}
+              >
+                <span className={primaryColor} aria-hidden="true">▸</span>
+                <span>{point}</span>
+              </li>
+            ))}
+          </ul>
+        )}
+
+        {/* A private codebase is a fact worth stating plainly, not an empty card */}
+        {isPrivate && (
+          <p className={`font-jetbrains text-xs ${primaryColor} opacity-70 mb-4 flex items-center gap-1.5`}>
+            <span className="material-symbols-outlined text-sm" aria-hidden="true">lock</span>
+            Proprietary codebase — happy to walk through the architecture
+          </p>
+        )}
+
+        <div className="flex-1" />
 
         {/* Tech Stack */}
         <div className="flex flex-wrap gap-2 mt-auto">
@@ -140,10 +168,8 @@ export const ProjectCard = ({
       </div>
 
       {/* Hover Gradient Line */}
-      <motion.div
-        initial={{ scaleX: 0 }}
-        whileHover={{ scaleX: 1 }}
-        className={`absolute bottom-0 left-0 right-0 h-1 rounded-b-2xl origin-left ${
+      <div
+        className={`absolute bottom-0 left-0 right-0 h-1 rounded-b-2xl origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ${
           theme === 'dark'
             ? 'bg-gradient-to-r from-[#00D1C7] to-[#00F5A0]'
             : 'bg-gradient-to-r from-[#646AFF] to-[#8B5CF6]'
@@ -155,13 +181,3 @@ export const ProjectCard = ({
 
 export default ProjectCard;
 
-ProjectCard.propTypes = {
-  theme: PropTypes.string.isRequired,
-  githubLink: PropTypes.string.isRequired,
-  demoLink: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  techStack: PropTypes.array.isRequired,
-  isProfessional: PropTypes.bool,
-  index: PropTypes.number
-};

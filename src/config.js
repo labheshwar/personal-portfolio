@@ -21,6 +21,11 @@ export const portfolioData = [
     githubLink: '#',
     demoLink: '#',
     isProfessional: true,
+    isPrivate: true,
+    impact: [
+      'Scaled a local platform to international market requirements in 2.5 months',
+      'Two products shipped: Back Office for merchant management, Merchant Portal for transactions',
+    ],
   },
   {
     name: 'TaskVare',
@@ -30,6 +35,11 @@ export const portfolioData = [
     githubLink: '#',
     demoLink: '#',
     isProfessional: true,
+    isPrivate: true,
+    impact: [
+      'Drag-and-drop dashboard layouts persisted per user with React DnD',
+      'Real-time messaging over SignalR with skeleton loading states',
+    ],
   },
   {
     name: 'Students Guide',
@@ -114,6 +124,6 @@ export const personalInfo = {
   phone: '+923438370414',
   linkedin: 'https://www.linkedin.com/in/labheshwar',
   github: 'https://www.github.com/labheshwar',
-  bio: 'Full-stack Software Engineer with around 3 years of experience in designing and building enterprise-grade applications using React, Next.js, and TypeScript. Successfully led end-to-end development of an international acquiring and payment processing platform for PaysysLabs.',
+  bio: 'Full-stack Software Engineer with 3 years of experience building enterprise-grade applications in React, Next.js, and TypeScript. I led end-to-end development of an international acquiring and payment processing platform at PaysysLabs, taking it from a local product to international market requirements in 2.5 months.',
   tagline: 'Delivering scalable solutions under tight deadlines while maintaining clean architecture and high code quality.',
 };

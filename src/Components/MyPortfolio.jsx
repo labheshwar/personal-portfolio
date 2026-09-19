@@ -42,7 +42,7 @@ const MyPortfolio = () => {
         {/* Section Header */}
         <motion.div variants={itemVariants} className="mb-12">
           <div className="flex items-center gap-4 mb-4">
-            <span className={`font-jetbrains text-sm ${primaryColor}`}>01.</span>
+            <span className={`font-jetbrains text-sm ${primaryColor}`}>02.</span>
             <h2 className={`font-inter font-bold text-2xl md:text-4xl ${secondaryColor}`}>
               Featured Projects
             </h2>
@@ -84,6 +84,8 @@ const MyPortfolio = () => {
                 githubLink={project.githubLink}
                 demoLink={project.demoLink}
                 isProfessional={project.isProfessional}
+                isPrivate={project.isPrivate}
+                impact={project.impact}
                 index={index}
               />
             </motion.div>

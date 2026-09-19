@@ -43,7 +43,7 @@ const Career = () => {
         {/* Section Header */}
         <motion.div variants={itemVariants} className="mb-12">
           <div className="flex items-center gap-4 mb-4">
-            <span className={`font-jetbrains text-sm ${primaryColor}`}>03.</span>
+            <span className={`font-jetbrains text-sm ${primaryColor}`}>01.</span>
             <h2 className={`font-inter font-bold text-2xl md:text-4xl ${secondaryColor}`}>
               Work Experience
             </h2>
@@ -149,7 +149,7 @@ const Career = () => {
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        transition={{ delay: 0.1 * descIndex }}
+                        transition={{ delay: Math.min(0.04 * descIndex, 0.3) }}
                         className="flex items-start gap-3"
                       >
                         <span className={`mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0 ${

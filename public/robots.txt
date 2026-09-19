@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://labheshwar.netlify.app/sitemap.xml

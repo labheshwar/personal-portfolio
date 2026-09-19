@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import Icon from './Icon';
 
 export const ProjectCard = ({
   theme,
@@ -39,9 +40,7 @@ export const ProjectCard = ({
                 : 'bg-gradient-to-br from-[#646AFF]/20 to-[#8B5CF6]/20'
             }`}
           >
-            <span className={`material-symbols-outlined text-2xl ${primaryColor}`}>
-              folder_special
-            </span>
+            <span className={primaryColor}><Icon name="folder" size={22} /></span>
           </motion.div>
           
           {/* Professional Badge */}
@@ -96,9 +95,7 @@ export const ProjectCard = ({
                 theme === 'dark' ? 'bg-white/10 hover:bg-white/20' : 'bg-black/10 hover:bg-black/20'
               } transition-colors`}
             >
-              <span className={`material-symbols-outlined text-xl ${secondaryColor}`}>
-                open_in_new
-              </span>
+              <span className={secondaryColor}><Icon name="external" size={18} /></span>
             </motion.a>
           )}
         </div>
@@ -134,7 +131,7 @@ export const ProjectCard = ({
         {/* A private codebase is a fact worth stating plainly, not an empty card */}
         {isPrivate && (
           <p className={`font-jetbrains text-xs ${primaryColor} opacity-70 mb-4 flex items-center gap-1.5`}>
-            <span className="material-symbols-outlined text-sm" aria-hidden="true">lock</span>
+            <Icon name="lock" size={14} />
             Proprietary codebase — happy to walk through the architecture
           </p>
         )}

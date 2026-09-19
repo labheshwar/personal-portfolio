@@ -1,5 +1,15 @@
-@import url('https://fonts.cdnfonts.com/css/menlo');
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Luckiest+Guy&family=Roboto+Flex:wght@400;500;600;700;800;900;1000&family=Roboto:wght@100;300;400;500;700;900&family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+/* Self-hosted fonts. The previous setup pulled six families from Google over a
+   CSS @import, which is render-blocking and only starts downloading after this
+   stylesheet parses — so the first paint landed in fallback system fonts.
+   These ship with the bundle and load immediately. */
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/inter/700.css';
+@import '@fontsource/inter/800.css';
+@import '@fontsource/jetbrains-mono/400.css';
+@import '@fontsource/jetbrains-mono/500.css';
+@import '@fontsource/jetbrains-mono/700.css';
 
 @tailwind base;
 @tailwind components;

@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { GitHubCalendar } from "react-github-calendar";
 import ThemeContext from "../ThemeContext";
+import Icon from './Icon';
 
 const GitHub = () => {
     const { theme } = useContext(ThemeContext);
@@ -162,7 +163,7 @@ const GitHub = () => {
                                     : 'bg-primary-light/10 text-primary-light border border-primary-light/30 hover:bg-primary-light/20'
                             } transition-colors flex items-center gap-2`}
                         >
-                            <span className="material-symbols-outlined text-sm">open_in_new</span>
+                            <Icon name="external" size={15} />
                             View Profile
                         </motion.a>
                     </div>

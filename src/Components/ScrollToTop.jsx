@@ -1,6 +1,7 @@
 import { useState, useEffect, useContext } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import ThemeContext from '../ThemeContext';
+import Icon from './Icon';
 
 const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -68,9 +69,9 @@ const ScrollToTop = () => {
           <motion.span
             animate={{ y: [0, -2, 0] }}
             transition={{ duration: 1.5, repeat: Infinity }}
-            className="material-symbols-outlined text-xl font-bold relative z-10"
+            className="relative z-10"
           >
-            arrow_upward
+            <Icon name="arrowUp" size={19} strokeWidth={2} />
           </motion.span>
         </motion.button>
       )}

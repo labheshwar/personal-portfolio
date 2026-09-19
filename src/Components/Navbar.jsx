@@ -2,6 +2,7 @@ import { useContext, useState } from 'react';
 import { motion } from 'framer-motion';
 import ThemeContext from '../ThemeContext';
 import { Link } from 'react-scroll';
+import Icon from './Icon';
 
 const Navbar = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
@@ -16,6 +17,7 @@ const Navbar = () => {
     { label: 'about', target: 'about' },
     { label: 'career', target: 'career' },
     { label: 'portfolio', target: 'portfolio' },
+    { label: 'decoder', target: 'decoder' },
     { label: 'skills', target: 'skills' },
     { label: 'contact', target: 'contact' },
   ];
@@ -98,9 +100,7 @@ const Navbar = () => {
                 : 'bg-gradient-to-br from-[#646AFF]/20 to-[#8B5CF6]/20 text-primary-light'
             } transition-colors duration-300`}
           >
-            <span className="material-symbols-outlined text-2xl">
-              {theme === 'light' ? 'dark_mode' : 'light_mode'}
-            </span>
+            <Icon name={theme === 'light' ? 'moon' : 'sun'} size={20} />
           </motion.button>
 
           {/* Mobile Menu Button */}

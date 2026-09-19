@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import { motion } from 'framer-motion';
 import ThemeContext from '../ThemeContext';
 import { personalInfo } from '../config';
+import Icon from './Icon';
 
 const Contact = () => {
   const { theme } = useContext(ThemeContext);
@@ -39,19 +40,19 @@ const Contact = () => {
       href: `mailto:${personalInfo.email}`,
     },
     {
-      icon: 'call',
+      icon: 'mail',
       label: 'Phone',
       value: personalInfo.phone,
       href: `tel:${personalInfo.phone}`,
     },
     {
-      icon: 'code',
+      icon: 'github',
       label: 'GitHub',
       value: 'github.com/labheshwar',
       href: personalInfo.github,
     },
     {
-      icon: 'work',
+      icon: 'linkedin',
       label: 'LinkedIn',
       value: 'linkedin.com/in/labheshwar',
       href: personalInfo.linkedin,
@@ -71,7 +72,7 @@ const Contact = () => {
         {/* Section Header */}
         <motion.div variants={itemVariants} className="mb-12 text-center">
           <div className="flex items-center justify-center gap-4 mb-4">
-            <span className={`font-jetbrains text-sm ${primaryColor}`}>04.</span>
+            <span className={`font-jetbrains text-sm ${primaryColor}`}>05.</span>
             <h2 className={`font-inter font-bold text-2xl md:text-4xl ${secondaryColor}`}>
               Get In Touch
             </h2>
@@ -141,7 +142,7 @@ const Contact = () => {
               } ${glowClass} font-semibold text-lg`}
             >
               <span className="flex items-center justify-center gap-2">
-                <span className="material-symbols-outlined">send</span>
+                <Icon name="send" size={20} />
                 Say Hello!
               </span>
             </motion.a>
@@ -168,9 +169,7 @@ const Contact = () => {
                     ? 'bg-primary-dark/10 group-hover:bg-primary-dark/20' 
                     : 'bg-primary-light/10 group-hover:bg-primary-light/20'
                 } transition-colors`}>
-                  <span className={`material-symbols-outlined text-2xl ${primaryColor}`}>
-                    {method.icon}
-                  </span>
+                  <span className={primaryColor}><Icon name={method.icon} size={22} /></span>
                 </div>
 
                 {/* Content */}
@@ -188,9 +187,9 @@ const Contact = () => {
                   initial={{ x: 0 }}
                   animate={{ x: [0, 4, 0] }}
                   transition={{ duration: 1.5, repeat: Infinity }}
-                  className={`material-symbols-outlined ${primaryColor} opacity-0 group-hover:opacity-100 transition-opacity`}
+                  className={`${primaryColor} opacity-0 group-hover:opacity-100 transition-opacity`}
                 >
-                  arrow_forward
+                  <Icon name="external" size={17} />
                 </motion.span>
               </motion.a>
             ))}

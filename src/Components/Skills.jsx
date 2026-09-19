@@ -52,7 +52,7 @@ const Skills = () => {
         {/* Section Header */}
         <motion.div variants={itemVariants} className="mb-12">
           <div className="flex items-center gap-4 mb-4">
-            <span className={`font-jetbrains text-sm ${primaryColor}`}>03.</span>
+            <span className={`font-jetbrains text-sm ${primaryColor}`}>04.</span>
             <h2 className={`font-inter font-bold text-2xl md:text-4xl ${secondaryColor}`}>
               Skills & Technologies
             </h2>
